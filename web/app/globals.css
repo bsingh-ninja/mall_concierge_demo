@@ -1,51 +1,164 @@
 @import "tailwindcss";
 
 /*
-  Dalma Mall Concierge, distilled. Neutral greys and white, one accent (blue) for the primary action and
-  the route, red only for the crowd surge and always beside words. No cards, no shadows, no borders:
-  whitespace and four type sizes (13 / 15 / 20 / 32) carry the hierarchy. The map is the one rich object.
+  Dalma Mall Concierge v2.
+  Two layers of tokens:
+  - Stage tokens (stage-*, panel, line, teal, brass, coral, agent colours): the presenter stage and the operator console.
+    "Desert Day" is the default; "Desert Dusk" (html[data-theme="dusk"]) only redefines these tokens.
+  - Phone tokens (page, ink, muted, faint, wash, accent, alert): the shopper's phone screen, light in both themes.
+  Teal = route, primary action, "you". Brass = money and offers. Coral/alert = crowd surge only, always beside words.
 */
 @theme {
-  --color-page: #f4f4f4;
-  --color-ink: #1f1f1f;
-  --color-muted: #6b6b6b;
-  --color-faint: #767676;
-  --color-wash: #ececec;
-  --color-accent: #1a73e8;
-  --color-accent-soft: #e8f0fe;
-  --color-alert: #d93025;
-  --font-sans: var(--font-inter);
+  /* phone screen */
+  --color-page: #f3f0ea;
+  --color-ink: #10233a;
+  --color-muted: #5f6878;
+  --color-faint: #737b88;
+  --color-wash: #e4ddd0;
+  --color-accent: #0f9d8f;
+  --color-accent-soft: #d7f0ec;
+  --color-alert: #e5484d;
+  --color-money: #a2690f;
+
+  /* stage (Desert Day) */
+  --color-stage: #eef2f3;
+  --color-stage-top: #f9fbfb;
+  --color-panel: #ffffff;
+  --color-panel-2: #e4ecee;
+  --color-line: rgba(16, 35, 58, 0.11);
+  --color-sand: #10233a;
+  --color-smuted: #4f5f73;
+  --color-sfaint: #7d8a9b;
+  --color-teal: #0b8f82;
+  --color-teal-ink: #ffffff;
+  --color-brass: #a2690f;
+  --color-coral: #d6392f;
+  --color-a-intent: #6a5bd8;
+  --color-a-crowd: #e0602f;
+  --color-a-offers: #c48a1c;
+  --color-a-upsell: #2e9a55;
+  --color-a-route: #0b8f82;
+  --color-badge-ink: #ffffff;
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display-face);
+  --font-mono: var(--font-mono-face);
 }
 
-html, body { background: var(--color-page); color: var(--color-ink); }
-body { font-family: var(--font-inter), system-ui, sans-serif; font-size: 15px; line-height: 1.5; }
+/* Desert Dusk: the same UI on a dark stage. The phone keeps its light screen. */
+html[data-theme="dusk"] {
+  --color-stage: #0b1524;
+  --color-stage-top: #112038;
+  --color-panel: #15263f;
+  --color-panel-2: #1b3050;
+  --color-line: rgba(236, 226, 208, 0.10);
+  --color-sand: #f1e8d8;
+  --color-smuted: #93a4bb;
+  --color-sfaint: #6f819a;
+  --color-teal: #2ad1bf;
+  --color-teal-ink: #062b28;
+  --color-brass: #e3b45e;
+  --color-coral: #ff6b5e;
+  --color-a-intent: #b3adff;
+  --color-a-crowd: #ff9a73;
+  --color-a-offers: #e3b45e;
+  --color-a-upsell: #86dc95;
+  --color-a-route: #2ad1bf;
+  --color-badge-ink: #0b1524;
+  color-scheme: dark;
+}
+
+/* Map tokens. Light by default; the operator map follows Dusk; the phone map is always light (see .device). */
+:root, .map-light {
+  --map-bg: #e9eef0; --map-floor: #dde4e9; --map-corridor: #ffffff; --map-unit: #f4f6f8; --map-unit-line: rgba(16, 35, 58, .08);
+  --map-ink: #10233a; --map-muted: #6a7a8c; --map-icon: #9aa7b4; --map-route: #0f9d8f; --map-alert: #e5484d; --map-casing: #ffffff;
+  --map-walked: #a9b6c2; --map-preview: #6a5bd8; --map-tag: #10233a; --map-tag-text: #ffffff;
+  --tint-food: #fde6d8; --tint-kids: #dcf1e2; --tint-tech: #e2ebf7; --tint-style: #efedf6; --tint-sport: #dff0f2; --tint-home: #f3eee4;
+  --heat-1: #8cc7cf; --heat-2: #f0c46a; --heat-3: #ef5a4c;
+}
+html[data-theme="dusk"] {
+  --map-bg: #0f1c30; --map-floor: #14233a; --map-corridor: #1c2f4b; --map-unit: #1d3352; --map-unit-line: rgba(241, 232, 216, .06);
+  --map-ink: #f1e8d8; --map-muted: #8fa3bd; --map-icon: #5d7898; --map-route: #2ad1bf; --map-alert: #ff6b5e; --map-casing: #0f1c30;
+  --map-walked: #4f6886; --map-tag: #f1e8d8; --map-tag-text: #0b1524;
+  --heat-1: #2b7a8c; --heat-2: #d9a74e; --heat-3: #ff6b5e;
+}
+
+html, body { background: var(--color-stage); color: var(--color-sand); }
+body { font-family: var(--font-body), "Segoe UI", system-ui, sans-serif; font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.font-display { font-family: var(--font-display-face), "Segoe UI", sans-serif; }
+.font-mono { font-family: var(--font-mono-face), Consolas, monospace; }
 .tnum { font-variant-numeric: tabular-nums; }
 ::selection { background: var(--color-accent-soft); color: var(--color-ink); }
-:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
-* { scrollbar-width: thin; scrollbar-color: #cfcfcf transparent; }
+:focus-visible { outline: 2px solid var(--color-teal); outline-offset: 3px; border-radius: 6px; }
+* { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--color-smuted) 40%, transparent) transparent; }
 input, textarea { caret-color: var(--color-accent); }
 
-/* The one primary action per screen */
+/* The stage: clean, with a soft spotlight behind the phone (no pattern). */
+.stage-bg {
+  background:
+    radial-gradient(520px 640px at 50% 55%, color-mix(in srgb, var(--color-teal) 10%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--color-stage-top), var(--color-stage));
+}
+.stage-bg.surge-wash { background-image:
+    radial-gradient(700px 420px at 50% 0%, color-mix(in srgb, var(--color-coral) 12%, transparent), transparent 70%),
+    radial-gradient(520px 640px at 50% 55%, color-mix(in srgb, var(--color-teal) 10%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--color-stage-top), var(--color-stage)); }
+
+/* Component classes live in a layer so Tailwind utilities (hidden, lg:flex, !px-…) can override them. */
+@layer components {
+/* Stage controls */
+.chap { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px 0 6px; border-radius: 17px; font-size: 13px; color: var(--color-smuted); white-space: nowrap; }
+.chap b { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 11px; background: var(--color-panel-2); font: 600 11px var(--font-mono-face), monospace; color: var(--color-smuted); }
+.chap.done { color: var(--color-sand); }
+.chap.done b { background: color-mix(in srgb, var(--color-teal) 18%, transparent); color: var(--color-teal); }
+.chap.on { background: var(--color-panel); color: var(--color-sand); font-weight: 600; box-shadow: 0 1px 2px rgba(16, 35, 58, .06); }
+.chap.on b { background: var(--color-teal); color: var(--color-teal-ink); }
+.chap.alert.on { background: color-mix(in srgb, var(--color-coral) 14%, transparent); }
+.chap.alert.on b { background: var(--color-coral); color: #fff; }
+.seg { display: inline-flex; padding: 3px; border-radius: 18px; background: var(--color-panel-2); }
+.seg button { height: 30px; padding: 0 14px; border-radius: 15px; font-size: 13px; color: var(--color-smuted); }
+.seg button[aria-selected="true"] { background: var(--color-sand); color: var(--color-stage); font-weight: 600; }
+.sbtn { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid var(--color-line); font-size: 13px; font-weight: 600; color: var(--color-sand); background: color-mix(in srgb, var(--color-panel) 70%, transparent); transition: background 150ms, border-color 150ms; }
+.sbtn:hover:not(:disabled) { border-color: color-mix(in srgb, var(--color-sand) 30%, transparent); }
+.sbtn:disabled { opacity: .55; cursor: default; }
+.sbtn.surge { color: var(--color-coral); border-color: color-mix(in srgb, var(--color-coral) 45%, transparent); }
+.sbtn.surge i { width: 8px; height: 8px; border-radius: 4px; background: var(--color-coral); box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-coral) 20%, transparent); }
+.next-btn { display: inline-flex; align-items: center; gap: 10px; height: 44px; padding: 0 22px; border-radius: 22px; background: var(--color-teal); color: var(--color-teal-ink); font-weight: 700; font-size: 14px; transition: filter 150ms, transform 150ms; }
+.next-btn:hover:not(:disabled) { filter: brightness(1.06); }
+.next-btn:active:not(:disabled) { transform: scale(.98); }
+.next-btn:disabled { opacity: .5; cursor: default; }
+kbd { font: 600 10.5px var(--font-mono-face), monospace; padding: 2px 6px; border-radius: 5px; background: var(--color-panel); color: var(--color-smuted); border: 1px solid var(--color-line); }
+
+/* Phone: the one primary action per screen */
 .primary { display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 24px; border-radius: 26px;
-  background: var(--color-accent); color: #fff; font-size: 15px; font-weight: 600; transition: background 150ms; }
-.primary:hover { background: #1666d0; }
+  background: var(--color-accent); color: #fff; font-size: 15px; font-weight: 700; transition: filter 150ms; }
+.primary:hover { filter: brightness(1.05); }
 .primary:disabled { background: #c9c9c9; }
-/* Everything else is text */
 .link { font-size: 15px; font-weight: 500; color: var(--color-ink); text-decoration: underline; text-decoration-color: #c9c9c9; text-underline-offset: 4px; }
 .link:hover { text-decoration-color: var(--color-ink); }
 .quiet { font-size: 13px; color: var(--color-muted); }
 .quiet:hover { color: var(--color-ink); }
 
-.map-btn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 20px; background: #fff; color: var(--color-muted); }
-.map-btn:hover { color: var(--color-ink); }
-.map-btn[aria-pressed="true"] { color: var(--color-accent); }
+.map-btn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 20px; background: var(--map-casing); color: var(--map-muted); border: 1px solid var(--map-unit-line); box-shadow: 0 2px 8px rgba(16, 35, 58, .14); }
+.map-btn:hover { color: var(--map-ink); }
+.map-btn[aria-pressed="true"] { color: var(--map-route); }
 
-.device { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--color-wash); }
-@media (min-width: 1024px) { .device { width: 412px; height: min(880px, calc(100dvh - 56px - 64px)); border-radius: 36px; } }
+/* The phone: full screen on a real phone, a realistic device on the desktop stage. */
+.device { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--color-wash); color: var(--color-ink);
+  --map-bg: #e9eef0; --map-floor: #dde4e9; --map-corridor: #ffffff; --map-unit: #f4f6f8; --map-unit-line: rgba(16, 35, 58, .08);
+  --map-ink: #10233a; --map-muted: #6a7a8c; --map-icon: #9aa7b4; --map-route: #0f9d8f; --map-alert: #e5484d; --map-casing: #ffffff;
+  --map-walked: #a9b6c2; --map-tag: #10233a; --map-tag-text: #ffffff; --heat-1: #8cc7cf; --heat-2: #f0c46a; --heat-3: #ef5a4c; }
+.device-frame { height: 100%; }
+@media (min-width: 1024px) {
+  .device-frame { height: auto; padding: 10px; border-radius: 48px; background: linear-gradient(160deg, #24344d, #0f1b2e);
+    box-shadow: 0 30px 70px rgba(16, 35, 58, .28), 0 0 0 1px rgba(255, 255, 255, .08) inset; }
+  .device { width: 392px; height: min(860px, calc(100dvh - 64px - 64px - 56px)); border-radius: 38px; }
+}
+html[data-theme="dusk"] .device-frame { box-shadow: 0 40px 90px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .08) inset; }
 
-.sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #fff; border-radius: 24px 24px 0 0; display: flex; flex-direction: column;
-  transition: height 320ms cubic-bezier(0.2, 0.8, 0.2, 1); }
-.grabber { width: 36px; height: 4px; border-radius: 2px; background: #dcdcdc; }
+.sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #fbfaf7; border-radius: 26px 26px 0 0; display: flex; flex-direction: column;
+  box-shadow: 0 -12px 30px rgba(16, 35, 58, .12); transition: height 320ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.grabber { width: 38px; height: 4px; border-radius: 2px; background: #d9d3c8; }
 
 .typing { display: inline-flex; gap: 4px; }
 .typing span { width: 5px; height: 5px; border-radius: 999px; background: var(--color-muted); animation: typing 1s infinite; }
@@ -55,7 +168,25 @@ input, textarea { caret-color: var(--color-accent); }
 .me-pulse { animation: pulse 2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
 .rise { animation: rise 280ms cubic-bezier(0.2, 0.8, 0.2, 1); }
 
+.pin-drop { transform-box: fill-box; transform-origin: 50% 100%; animation: pin-drop 520ms cubic-bezier(.3, 1.5, .5, 1) both; }
+.surge-pulse { animation: surge-pulse 1.1s ease-in-out infinite; }
+.march { animation: march .8s linear infinite; }
+.chip { display: inline-flex; flex-shrink: 0; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 16px; background: #fff; color: var(--color-ink);
+  font-size: 12.5px; font-weight: 600; box-shadow: 0 2px 8px rgba(16, 35, 58, .14); white-space: nowrap; transition: background 150ms, color 150ms; }
+.chip i { width: 8px; height: 8px; border-radius: 4px; }
+.chip[aria-pressed="true"] { background: var(--color-ink); color: #fff; }
+.pill { display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 13px; background: #efebe3; color: var(--color-ink); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.badge { display: grid; place-items: center; flex-shrink: 0; border-radius: 12px; font: 600 11px var(--font-mono-face), monospace; color: var(--color-badge-ink); }
+.card { border-radius: 20px; border: 1px solid var(--color-line); background: var(--color-panel); box-shadow: 0 1px 2px rgba(16, 35, 58, .05), 0 8px 24px rgba(16, 35, 58, .06); }
+html[data-theme="dusk"] .card { box-shadow: none; }
+.glow { animation: glow 1.2s ease-out; }
+}
+
 @keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pin-drop { from { opacity: 0; transform: translateY(-30%) scale(.9); } to { opacity: 1; transform: none; } }
+@keyframes surge-pulse { 50% { stroke-opacity: .35; } }
+@keyframes march { to { stroke-dashoffset: -60; } }
+@keyframes glow { from { box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-teal) 45%, transparent); } to { box-shadow: 0 0 0 3px transparent; } }
 @keyframes pulse { 0% { transform: scale(0.6); opacity: 0.6; } 100% { transform: scale(1.8); opacity: 0; } }
 @keyframes typing { 0%, 60%, 100% { opacity: 0.3; } 30% { opacity: 1; } }
 @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
