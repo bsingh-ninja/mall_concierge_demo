@@ -1,0 +1,3912 @@
+{
+ "name": "Dalma Mall",
+ "viewBox": [
+  0,
+  0,
+  1200,
+  760
+ ],
+ "units_to_m": 0.3,
+ "corridors": [
+  {
+   "id": "H1",
+   "x1": 120,
+   "y1": 200,
+   "x2": 1080,
+   "y2": 200
+  },
+  {
+   "id": "H2",
+   "x1": 120,
+   "y1": 560,
+   "x2": 1080,
+   "y2": 560
+  },
+  {
+   "id": "V1",
+   "x1": 120,
+   "y1": 200,
+   "x2": 120,
+   "y2": 560
+  },
+  {
+   "id": "V2",
+   "x1": 600,
+   "y1": 200,
+   "x2": 600,
+   "y2": 560
+  },
+  {
+   "id": "V3",
+   "x1": 1080,
+   "y1": 200,
+   "x2": 1080,
+   "y2": 560
+  },
+  {
+   "id": "ENT",
+   "x1": 40,
+   "y1": 380,
+   "x2": 120,
+   "y2": 380
+  }
+ ],
+ "entrance": "n40_380",
+ "atrium": "n600_380",
+ "nodes": [
+  {
+   "id": "n178_175",
+   "x": 177.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n178_200",
+   "x": 177.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n242_175",
+   "x": 242.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n242_200",
+   "x": 242.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n308_175",
+   "x": 307.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n308_200",
+   "x": 307.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n372_175",
+   "x": 372.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n372_200",
+   "x": 372.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n438_175",
+   "x": 437.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n438_200",
+   "x": 437.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n502_175",
+   "x": 502.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n502_200",
+   "x": 502.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n568_175",
+   "x": 567.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n568_200",
+   "x": 567.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n632_175",
+   "x": 632.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n632_200",
+   "x": 632.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n698_175",
+   "x": 697.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n698_200",
+   "x": 697.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n762_175",
+   "x": 762.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n762_200",
+   "x": 762.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n828_175",
+   "x": 827.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n828_200",
+   "x": 827.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n892_175",
+   "x": 892.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n892_200",
+   "x": 892.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n958_175",
+   "x": 957.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n958_200",
+   "x": 957.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n1022_175",
+   "x": 1022.5,
+   "y": 175,
+   "kind": "door"
+  },
+  {
+   "id": "n1022_200",
+   "x": 1022.5,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n176_225",
+   "x": 175.7,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n176_200",
+   "x": 175.7,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n237_225",
+   "x": 237.1,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n237_200",
+   "x": 237.1,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n299_225",
+   "x": 298.6,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n299_200",
+   "x": 298.6,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n360_225",
+   "x": 360.0,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n360_200",
+   "x": 360.0,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n421_225",
+   "x": 421.4,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n421_200",
+   "x": 421.4,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n483_225",
+   "x": 482.9,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n483_200",
+   "x": 482.9,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n544_225",
+   "x": 544.3,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n544_200",
+   "x": 544.3,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n176_535",
+   "x": 175.7,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n176_560",
+   "x": 175.7,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n237_535",
+   "x": 237.1,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n237_560",
+   "x": 237.1,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n299_535",
+   "x": 298.6,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n299_560",
+   "x": 298.6,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n360_535",
+   "x": 360.0,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n360_560",
+   "x": 360.0,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n421_535",
+   "x": 421.4,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n421_560",
+   "x": 421.4,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n483_535",
+   "x": 482.9,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n483_560",
+   "x": 482.9,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n544_535",
+   "x": 544.3,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n544_560",
+   "x": 544.3,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n656_225",
+   "x": 655.7,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n656_200",
+   "x": 655.7,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n717_225",
+   "x": 717.1,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n717_200",
+   "x": 717.1,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n779_225",
+   "x": 778.6,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n779_200",
+   "x": 778.6,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n840_225",
+   "x": 840.0,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n840_200",
+   "x": 840.0,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n901_225",
+   "x": 901.4,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n901_200",
+   "x": 901.4,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n963_225",
+   "x": 962.9,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n963_200",
+   "x": 962.9,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n1024_225",
+   "x": 1024.3,
+   "y": 225,
+   "kind": "door"
+  },
+  {
+   "id": "n1024_200",
+   "x": 1024.3,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n656_535",
+   "x": 655.7,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n656_560",
+   "x": 655.7,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n717_535",
+   "x": 717.1,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n717_560",
+   "x": 717.1,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n779_535",
+   "x": 778.6,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n779_560",
+   "x": 778.6,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n840_535",
+   "x": 840.0,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n840_560",
+   "x": 840.0,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n901_535",
+   "x": 901.4,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n901_560",
+   "x": 901.4,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n963_535",
+   "x": 962.9,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n963_560",
+   "x": 962.9,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n1024_535",
+   "x": 1024.3,
+   "y": 535,
+   "kind": "door"
+  },
+  {
+   "id": "n1024_560",
+   "x": 1024.3,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n178_585",
+   "x": 177.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n178_560",
+   "x": 177.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n242_585",
+   "x": 242.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n242_560",
+   "x": 242.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n308_585",
+   "x": 307.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n308_560",
+   "x": 307.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n372_585",
+   "x": 372.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n372_560",
+   "x": 372.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n438_585",
+   "x": 437.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n438_560",
+   "x": 437.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n502_585",
+   "x": 502.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n502_560",
+   "x": 502.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n568_585",
+   "x": 567.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n568_560",
+   "x": 567.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n632_585",
+   "x": 632.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n632_560",
+   "x": 632.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n698_585",
+   "x": 697.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n698_560",
+   "x": 697.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n762_585",
+   "x": 762.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n762_560",
+   "x": 762.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n828_585",
+   "x": 827.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n828_560",
+   "x": 827.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n892_585",
+   "x": 892.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n892_560",
+   "x": 892.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n958_585",
+   "x": 957.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n958_560",
+   "x": 957.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n1022_585",
+   "x": 1022.5,
+   "y": 585,
+   "kind": "door"
+  },
+  {
+   "id": "n1022_560",
+   "x": 1022.5,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n95_270",
+   "x": 95,
+   "y": 270,
+   "kind": "door"
+  },
+  {
+   "id": "n120_270",
+   "x": 120,
+   "y": 270,
+   "kind": "walk"
+  },
+  {
+   "id": "n95_490",
+   "x": 95,
+   "y": 490,
+   "kind": "door"
+  },
+  {
+   "id": "n120_490",
+   "x": 120,
+   "y": 490,
+   "kind": "walk"
+  },
+  {
+   "id": "n1105_290",
+   "x": 1105,
+   "y": 290,
+   "kind": "door"
+  },
+  {
+   "id": "n1080_290",
+   "x": 1080,
+   "y": 290,
+   "kind": "walk"
+  },
+  {
+   "id": "n1105_470",
+   "x": 1105,
+   "y": 470,
+   "kind": "door"
+  },
+  {
+   "id": "n1080_470",
+   "x": 1080,
+   "y": 470,
+   "kind": "walk"
+  },
+  {
+   "id": "n40_380",
+   "x": 40,
+   "y": 380,
+   "kind": "entrance",
+   "label": "Main Entrance"
+  },
+  {
+   "id": "n600_380",
+   "x": 600,
+   "y": 380,
+   "kind": "atrium",
+   "label": "Central Atrium"
+  },
+  {
+   "id": "n120_200",
+   "x": 120,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n600_200",
+   "x": 600,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n1080_200",
+   "x": 1080,
+   "y": 200,
+   "kind": "walk"
+  },
+  {
+   "id": "n120_560",
+   "x": 120,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n600_560",
+   "x": 600,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n1080_560",
+   "x": 1080,
+   "y": 560,
+   "kind": "walk"
+  },
+  {
+   "id": "n120_380",
+   "x": 120,
+   "y": 380,
+   "kind": "walk"
+  }
+ ],
+ "edges": [
+  [
+   "n1022_175",
+   "n1022_200"
+  ],
+  [
+   "n1022_200",
+   "n1024_200"
+  ],
+  [
+   "n1022_200",
+   "n963_200"
+  ],
+  [
+   "n1022_560",
+   "n1022_585"
+  ],
+  [
+   "n1022_560",
+   "n1024_560"
+  ],
+  [
+   "n1022_560",
+   "n963_560"
+  ],
+  [
+   "n1024_200",
+   "n1024_225"
+  ],
+  [
+   "n1024_200",
+   "n1080_200"
+  ],
+  [
+   "n1024_535",
+   "n1024_560"
+  ],
+  [
+   "n1024_560",
+   "n1080_560"
+  ],
+  [
+   "n1080_200",
+   "n1080_290"
+  ],
+  [
+   "n1080_290",
+   "n1080_470"
+  ],
+  [
+   "n1080_290",
+   "n1105_290"
+  ],
+  [
+   "n1080_470",
+   "n1080_560"
+  ],
+  [
+   "n1080_470",
+   "n1105_470"
+  ],
+  [
+   "n120_200",
+   "n120_270"
+  ],
+  [
+   "n120_200",
+   "n176_200"
+  ],
+  [
+   "n120_270",
+   "n120_380"
+  ],
+  [
+   "n120_270",
+   "n95_270"
+  ],
+  [
+   "n120_380",
+   "n120_490"
+  ],
+  [
+   "n120_380",
+   "n40_380"
+  ],
+  [
+   "n120_490",
+   "n120_560"
+  ],
+  [
+   "n120_490",
+   "n95_490"
+  ],
+  [
+   "n120_560",
+   "n176_560"
+  ],
+  [
+   "n176_200",
+   "n176_225"
+  ],
+  [
+   "n176_200",
+   "n178_200"
+  ],
+  [
+   "n176_535",
+   "n176_560"
+  ],
+  [
+   "n176_560",
+   "n178_560"
+  ],
+  [
+   "n178_175",
+   "n178_200"
+  ],
+  [
+   "n178_200",
+   "n237_200"
+  ],
+  [
+   "n178_560",
+   "n178_585"
+  ],
+  [
+   "n178_560",
+   "n237_560"
+  ],
+  [
+   "n237_200",
+   "n237_225"
+  ],
+  [
+   "n237_200",
+   "n242_200"
+  ],
+  [
+   "n237_535",
+   "n237_560"
+  ],
+  [
+   "n237_560",
+   "n242_560"
+  ],
+  [
+   "n242_175",
+   "n242_200"
+  ],
+  [
+   "n242_200",
+   "n299_200"
+  ],
+  [
+   "n242_560",
+   "n242_585"
+  ],
+  [
+   "n242_560",
+   "n299_560"
+  ],
+  [
+   "n299_200",
+   "n299_225"
+  ],
+  [
+   "n299_200",
+   "n308_200"
+  ],
+  [
+   "n299_535",
+   "n299_560"
+  ],
+  [
+   "n299_560",
+   "n308_560"
+  ],
+  [
+   "n308_175",
+   "n308_200"
+  ],
+  [
+   "n308_200",
+   "n360_200"
+  ],
+  [
+   "n308_560",
+   "n308_585"
+  ],
+  [
+   "n308_560",
+   "n360_560"
+  ],
+  [
+   "n360_200",
+   "n360_225"
+  ],
+  [
+   "n360_200",
+   "n372_200"
+  ],
+  [
+   "n360_535",
+   "n360_560"
+  ],
+  [
+   "n360_560",
+   "n372_560"
+  ],
+  [
+   "n372_175",
+   "n372_200"
+  ],
+  [
+   "n372_200",
+   "n421_200"
+  ],
+  [
+   "n372_560",
+   "n372_585"
+  ],
+  [
+   "n372_560",
+   "n421_560"
+  ],
+  [
+   "n421_200",
+   "n421_225"
+  ],
+  [
+   "n421_200",
+   "n438_200"
+  ],
+  [
+   "n421_535",
+   "n421_560"
+  ],
+  [
+   "n421_560",
+   "n438_560"
+  ],
+  [
+   "n438_175",
+   "n438_200"
+  ],
+  [
+   "n438_200",
+   "n483_200"
+  ],
+  [
+   "n438_560",
+   "n438_585"
+  ],
+  [
+   "n438_560",
+   "n483_560"
+  ],
+  [
+   "n483_200",
+   "n483_225"
+  ],
+  [
+   "n483_200",
+   "n502_200"
+  ],
+  [
+   "n483_535",
+   "n483_560"
+  ],
+  [
+   "n483_560",
+   "n502_560"
+  ],
+  [
+   "n502_175",
+   "n502_200"
+  ],
+  [
+   "n502_200",
+   "n544_200"
+  ],
+  [
+   "n502_560",
+   "n502_585"
+  ],
+  [
+   "n502_560",
+   "n544_560"
+  ],
+  [
+   "n544_200",
+   "n544_225"
+  ],
+  [
+   "n544_200",
+   "n568_200"
+  ],
+  [
+   "n544_535",
+   "n544_560"
+  ],
+  [
+   "n544_560",
+   "n568_560"
+  ],
+  [
+   "n568_175",
+   "n568_200"
+  ],
+  [
+   "n568_200",
+   "n600_200"
+  ],
+  [
+   "n568_560",
+   "n568_585"
+  ],
+  [
+   "n568_560",
+   "n600_560"
+  ],
+  [
+   "n600_200",
+   "n600_380"
+  ],
+  [
+   "n600_200",
+   "n632_200"
+  ],
+  [
+   "n600_380",
+   "n600_560"
+  ],
+  [
+   "n600_560",
+   "n632_560"
+  ],
+  [
+   "n632_175",
+   "n632_200"
+  ],
+  [
+   "n632_200",
+   "n656_200"
+  ],
+  [
+   "n632_560",
+   "n632_585"
+  ],
+  [
+   "n632_560",
+   "n656_560"
+  ],
+  [
+   "n656_200",
+   "n656_225"
+  ],
+  [
+   "n656_200",
+   "n698_200"
+  ],
+  [
+   "n656_535",
+   "n656_560"
+  ],
+  [
+   "n656_560",
+   "n698_560"
+  ],
+  [
+   "n698_175",
+   "n698_200"
+  ],
+  [
+   "n698_200",
+   "n717_200"
+  ],
+  [
+   "n698_560",
+   "n698_585"
+  ],
+  [
+   "n698_560",
+   "n717_560"
+  ],
+  [
+   "n717_200",
+   "n717_225"
+  ],
+  [
+   "n717_200",
+   "n762_200"
+  ],
+  [
+   "n717_535",
+   "n717_560"
+  ],
+  [
+   "n717_560",
+   "n762_560"
+  ],
+  [
+   "n762_175",
+   "n762_200"
+  ],
+  [
+   "n762_200",
+   "n779_200"
+  ],
+  [
+   "n762_560",
+   "n762_585"
+  ],
+  [
+   "n762_560",
+   "n779_560"
+  ],
+  [
+   "n779_200",
+   "n779_225"
+  ],
+  [
+   "n779_200",
+   "n828_200"
+  ],
+  [
+   "n779_535",
+   "n779_560"
+  ],
+  [
+   "n779_560",
+   "n828_560"
+  ],
+  [
+   "n828_175",
+   "n828_200"
+  ],
+  [
+   "n828_200",
+   "n840_200"
+  ],
+  [
+   "n828_560",
+   "n828_585"
+  ],
+  [
+   "n828_560",
+   "n840_560"
+  ],
+  [
+   "n840_200",
+   "n840_225"
+  ],
+  [
+   "n840_200",
+   "n892_200"
+  ],
+  [
+   "n840_535",
+   "n840_560"
+  ],
+  [
+   "n840_560",
+   "n892_560"
+  ],
+  [
+   "n892_175",
+   "n892_200"
+  ],
+  [
+   "n892_200",
+   "n901_200"
+  ],
+  [
+   "n892_560",
+   "n892_585"
+  ],
+  [
+   "n892_560",
+   "n901_560"
+  ],
+  [
+   "n901_200",
+   "n901_225"
+  ],
+  [
+   "n901_200",
+   "n958_200"
+  ],
+  [
+   "n901_535",
+   "n901_560"
+  ],
+  [
+   "n901_560",
+   "n958_560"
+  ],
+  [
+   "n958_175",
+   "n958_200"
+  ],
+  [
+   "n958_200",
+   "n963_200"
+  ],
+  [
+   "n958_560",
+   "n958_585"
+  ],
+  [
+   "n958_560",
+   "n963_560"
+  ],
+  [
+   "n963_200",
+   "n963_225"
+  ],
+  [
+   "n963_535",
+   "n963_560"
+  ]
+ ],
+ "stores": [
+  {
+   "id": "urban-sole",
+   "name": "Urban Sole",
+   "category": "footwear",
+   "slot": "N1",
+   "zone": "N",
+   "rect": {
+    "x": 147.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n178_175",
+   "popularity": 0.68,
+   "kpi": {
+    "sales_vs_target": 106,
+    "footfall_today": 1498,
+    "conversion_pct": 14.4,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "linen--loom",
+   "name": "Linen & Loom",
+   "category": "fashion",
+   "slot": "N2",
+   "zone": "N",
+   "rect": {
+    "x": 212.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n242_175",
+   "popularity": 0.66,
+   "kpi": {
+    "sales_vs_target": 89,
+    "footfall_today": 1332,
+    "conversion_pct": 8.2,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "velvet-rose",
+   "name": "Velvet Rose",
+   "category": "fashion",
+   "slot": "N3",
+   "zone": "N",
+   "rect": {
+    "x": 277.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n308_175",
+   "popularity": 0.68,
+   "kpi": {
+    "sales_vs_target": 93,
+    "footfall_today": 1662,
+    "conversion_pct": 12.5,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "gentry-tailors",
+   "name": "Gentry Tailors",
+   "category": "fashion",
+   "slot": "N4",
+   "zone": "N",
+   "rect": {
+    "x": 342.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n372_175",
+   "popularity": 0.38,
+   "kpi": {
+    "sales_vs_target": 94,
+    "footfall_today": 739,
+    "conversion_pct": 12.0,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "denim-district",
+   "name": "Denim District",
+   "category": "fashion",
+   "slot": "N5",
+   "zone": "N",
+   "rect": {
+    "x": 407.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n438_175",
+   "popularity": 0.42,
+   "kpi": {
+    "sales_vs_target": 98,
+    "footfall_today": 991,
+    "conversion_pct": 13.7,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "glow-beauty",
+   "name": "Glow Beauty",
+   "category": "beauty",
+   "slot": "N6",
+   "zone": "N",
+   "rect": {
+    "x": 472.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n502_175",
+   "popularity": 0.51,
+   "kpi": {
+    "sales_vs_target": 115,
+    "footfall_today": 1154,
+    "conversion_pct": 13.3,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "aura-fragrances",
+   "name": "Aura Fragrances",
+   "category": "beauty",
+   "slot": "N7",
+   "zone": "N",
+   "rect": {
+    "x": 537.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n568_175",
+   "popularity": 0.64,
+   "kpi": {
+    "sales_vs_target": 117,
+    "footfall_today": 1629,
+    "conversion_pct": 14.2,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "pixel-point",
+   "name": "Pixel Point",
+   "category": "electronics",
+   "slot": "N8",
+   "zone": "N",
+   "rect": {
+    "x": 602.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n632_175",
+   "popularity": 0.75,
+   "kpi": {
+    "sales_vs_target": 117,
+    "footfall_today": 1863,
+    "conversion_pct": 11.2,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "gadget-garage",
+   "name": "Gadget Garage",
+   "category": "electronics",
+   "slot": "N9",
+   "zone": "N",
+   "rect": {
+    "x": 667.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n698_175",
+   "popularity": 0.51,
+   "kpi": {
+    "sales_vs_target": 117,
+    "footfall_today": 1156,
+    "conversion_pct": 11.1,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "opal-optics",
+   "name": "Opal Optics",
+   "category": "eyewear",
+   "slot": "N10",
+   "zone": "N",
+   "rect": {
+    "x": 732.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n762_175",
+   "popularity": 0.26,
+   "kpi": {
+    "sales_vs_target": 108,
+    "footfall_today": 590,
+    "conversion_pct": 12.4,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "golden-thread-jewellers",
+   "name": "Golden Thread Jewellers",
+   "category": "jewellery",
+   "slot": "N11",
+   "zone": "N",
+   "rect": {
+    "x": 797.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n828_175",
+   "popularity": 0.66,
+   "kpi": {
+    "sales_vs_target": 111,
+    "footfall_today": 1523,
+    "conversion_pct": 10.6,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "timekeeper",
+   "name": "Timekeeper",
+   "category": "jewellery",
+   "slot": "N12",
+   "zone": "N",
+   "rect": {
+    "x": 862.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n892_175",
+   "popularity": 0.57,
+   "kpi": {
+    "sales_vs_target": 103,
+    "footfall_today": 1235,
+    "conversion_pct": 14.2,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "silk-route-abayas",
+   "name": "Silk Route Abayas",
+   "category": "fashion",
+   "slot": "N13",
+   "zone": "N",
+   "rect": {
+    "x": 927.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n958_175",
+   "popularity": 0.47,
+   "kpi": {
+    "sales_vs_target": 86,
+    "footfall_today": 1129,
+    "conversion_pct": 8.8,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "bean--bloom-caf\u00e9",
+   "name": "Bean & Bloom Caf\u00e9",
+   "category": "cafe",
+   "slot": "N14",
+   "zone": "N",
+   "rect": {
+    "x": 992.0,
+    "y": 60,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n1022_175",
+   "popularity": 0.46,
+   "kpi": {
+    "sales_vs_target": 89,
+    "footfall_today": 1195,
+    "conversion_pct": 58.8,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "paper-trail-books",
+   "name": "Paper Trail Books",
+   "category": "books",
+   "slot": "WT1",
+   "zone": "WT",
+   "rect": {
+    "x": 147.0,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n176_225",
+   "popularity": 0.28,
+   "kpi": {
+    "sales_vs_target": 111,
+    "footfall_today": 523,
+    "conversion_pct": 17.6,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "little-explorers",
+   "name": "Little Explorers",
+   "category": "kids",
+   "slot": "WT2",
+   "zone": "WT",
+   "rect": {
+    "x": 208.4,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n237_225",
+   "popularity": 0.3,
+   "kpi": {
+    "sales_vs_target": 68,
+    "footfall_today": 651,
+    "conversion_pct": 9.0,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "kicks-lab",
+   "name": "Kicks Lab",
+   "category": "footwear",
+   "slot": "WT3",
+   "zone": "WT",
+   "rect": {
+    "x": 269.9,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n299_225",
+   "popularity": 0.54,
+   "kpi": {
+    "sales_vs_target": 95,
+    "footfall_today": 1163,
+    "conversion_pct": 12.6,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "tiny-toes",
+   "name": "Tiny Toes",
+   "category": "kids",
+   "slot": "WT4",
+   "zone": "WT",
+   "rect": {
+    "x": 331.3,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n360_225",
+   "popularity": 0.47,
+   "kpi": {
+    "sales_vs_target": 115,
+    "footfall_today": 995,
+    "conversion_pct": 11.0,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "brick-box-toys",
+   "name": "Brick Box Toys",
+   "category": "toys",
+   "slot": "WT5",
+   "zone": "WT",
+   "rect": {
+    "x": 392.7,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n421_225",
+   "popularity": 0.62,
+   "kpi": {
+    "sales_vs_target": 116,
+    "footfall_today": 1218,
+    "conversion_pct": 14.6,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "sweet-tooth",
+   "name": "Sweet Tooth",
+   "category": "cafe",
+   "slot": "WT6",
+   "zone": "WT",
+   "rect": {
+    "x": 454.1,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n483_225",
+   "popularity": 0.69,
+   "kpi": {
+    "sales_vs_target": 105,
+    "footfall_today": 1306,
+    "conversion_pct": 52.4,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "jungle-jam-play-zone",
+   "name": "Jungle Jam Play Zone",
+   "category": "play",
+   "slot": "WT7",
+   "zone": "WT",
+   "rect": {
+    "x": 515.6,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n544_225",
+   "popularity": 0.9,
+   "kpi": {
+    "sales_vs_target": 118,
+    "footfall_today": 1825,
+    "conversion_pct": 15.7,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "casa-living",
+   "name": "Casa Living",
+   "category": "home",
+   "slot": "WB1",
+   "zone": "WB",
+   "rect": {
+    "x": 147.0,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n176_535",
+   "popularity": 0.34,
+   "kpi": {
+    "sales_vs_target": 100,
+    "footfall_today": 783,
+    "conversion_pct": 11.5,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "kitchen-craft",
+   "name": "Kitchen Craft",
+   "category": "home",
+   "slot": "WB2",
+   "zone": "WB",
+   "rect": {
+    "x": 208.4,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n237_535",
+   "popularity": 0.45,
+   "kpi": {
+    "sales_vs_target": 79,
+    "footfall_today": 1143,
+    "conversion_pct": 12.6,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "bloom-florist",
+   "name": "Bloom Florist",
+   "category": "gifts",
+   "slot": "WB3",
+   "zone": "WB",
+   "rect": {
+    "x": 269.9,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n299_535",
+   "popularity": 0.47,
+   "kpi": {
+    "sales_vs_target": 99,
+    "footfall_today": 1139,
+    "conversion_pct": 14.7,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "pet-pantry",
+   "name": "Pet Pantry",
+   "category": "pets",
+   "slot": "WB4",
+   "zone": "WB",
+   "rect": {
+    "x": 331.3,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n360_535",
+   "popularity": 0.6,
+   "kpi": {
+    "sales_vs_target": 110,
+    "footfall_today": 1540,
+    "conversion_pct": 11.4,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "phone-doctor",
+   "name": "Phone Doctor",
+   "category": "electronics",
+   "slot": "WB5",
+   "zone": "WB",
+   "rect": {
+    "x": 392.7,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n421_535",
+   "popularity": 0.46,
+   "kpi": {
+    "sales_vs_target": 111,
+    "footfall_today": 1178,
+    "conversion_pct": 17.3,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "henna-lounge",
+   "name": "Henna Lounge",
+   "category": "beauty",
+   "slot": "WB6",
+   "zone": "WB",
+   "rect": {
+    "x": 454.1,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n483_535",
+   "popularity": 0.53,
+   "kpi": {
+    "sales_vs_target": 95,
+    "footfall_today": 1277,
+    "conversion_pct": 15.1,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "gift-garden",
+   "name": "Gift Garden",
+   "category": "gifts",
+   "slot": "WB7",
+   "zone": "WB",
+   "rect": {
+    "x": 515.6,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n544_535",
+   "popularity": 0.49,
+   "kpi": {
+    "sales_vs_target": 92,
+    "footfall_today": 951,
+    "conversion_pct": 11.1,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "peak-outdoor",
+   "name": "Peak Outdoor",
+   "category": "sports",
+   "slot": "ET1",
+   "zone": "ET",
+   "rect": {
+    "x": 627.0,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n656_225",
+   "popularity": 0.37,
+   "kpi": {
+    "sales_vs_target": 106,
+    "footfall_today": 824,
+    "conversion_pct": 15.7,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "stride-athletics",
+   "name": "Stride Athletics",
+   "category": "sports",
+   "slot": "ET2",
+   "zone": "ET",
+   "rect": {
+    "x": 688.4,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n717_225",
+   "popularity": 0.8,
+   "kpi": {
+    "sales_vs_target": 119,
+    "footfall_today": 1850,
+    "conversion_pct": 11.8,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "fit-factory",
+   "name": "Fit Factory",
+   "category": "sports",
+   "slot": "ET3",
+   "zone": "ET",
+   "rect": {
+    "x": 749.9,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n779_225",
+   "popularity": 0.33,
+   "kpi": {
+    "sales_vs_target": 95,
+    "footfall_today": 753,
+    "conversion_pct": 12.7,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "cycle-hub",
+   "name": "Cycle Hub",
+   "category": "sports",
+   "slot": "ET4",
+   "zone": "ET",
+   "rect": {
+    "x": 811.3,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n840_225",
+   "popularity": 0.65,
+   "kpi": {
+    "sales_vs_target": 92,
+    "footfall_today": 1207,
+    "conversion_pct": 9.9,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "game-zone",
+   "name": "Game Zone",
+   "category": "electronics",
+   "slot": "ET5",
+   "zone": "ET",
+   "rect": {
+    "x": 872.7,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n901_225",
+   "popularity": 0.45,
+   "kpi": {
+    "sales_vs_target": 90,
+    "footfall_today": 1092,
+    "conversion_pct": 14.2,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "snap-studio",
+   "name": "Snap Studio",
+   "category": "electronics",
+   "slot": "ET6",
+   "zone": "ET",
+   "rect": {
+    "x": 934.1,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n963_225",
+   "popularity": 0.67,
+   "kpi": {
+    "sales_vs_target": 72,
+    "footfall_today": 1685,
+    "conversion_pct": 9.1,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "dates--co",
+   "name": "Dates & Co",
+   "category": "gifts",
+   "slot": "ET7",
+   "zone": "ET",
+   "rect": {
+    "x": 995.6,
+    "y": 225,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n1024_225",
+   "popularity": 0.31,
+   "kpi": {
+    "sales_vs_target": 114,
+    "footfall_today": 596,
+    "conversion_pct": 13.4,
+    "area_sqm": 749
+   }
+  },
+  {
+   "id": "noodle-theory",
+   "name": "Noodle Theory",
+   "category": "restaurant",
+   "slot": "EB1",
+   "zone": "EB",
+   "rect": {
+    "x": 627.0,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n656_535",
+   "popularity": 0.67,
+   "kpi": {
+    "sales_vs_target": 95,
+    "footfall_today": 1646,
+    "conversion_pct": 51.5,
+    "area_sqm": 749
+   },
+   "restaurant": {
+    "seats": 60,
+    "family_friendly": false,
+    "rating": 4.4
+   }
+  },
+  {
+   "id": "burger-barn",
+   "name": "Burger Barn",
+   "category": "restaurant",
+   "slot": "EB2",
+   "zone": "EB",
+   "rect": {
+    "x": 688.4,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n717_535",
+   "popularity": 0.75,
+   "kpi": {
+    "sales_vs_target": 117,
+    "footfall_today": 1862,
+    "conversion_pct": 55.8,
+    "area_sqm": 749
+   },
+   "restaurant": {
+    "seats": 80,
+    "family_friendly": true,
+    "rating": 4.1
+   }
+  },
+  {
+   "id": "saffron-house",
+   "name": "Saffron House",
+   "category": "restaurant",
+   "slot": "EB3",
+   "zone": "EB",
+   "rect": {
+    "x": 749.9,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n779_535",
+   "popularity": 0.95,
+   "kpi": {
+    "sales_vs_target": 106,
+    "footfall_today": 2065,
+    "conversion_pct": 35.5,
+    "area_sqm": 749
+   },
+   "restaurant": {
+    "seats": 90,
+    "family_friendly": true,
+    "rating": 4.8
+   }
+  },
+  {
+   "id": "olive--ember",
+   "name": "Olive & Ember",
+   "category": "restaurant",
+   "slot": "EB4",
+   "zone": "EB",
+   "rect": {
+    "x": 811.3,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n840_535",
+   "popularity": 0.45,
+   "kpi": {
+    "sales_vs_target": 61,
+    "footfall_today": 1097,
+    "conversion_pct": 42.4,
+    "area_sqm": 749
+   },
+   "restaurant": {
+    "seats": 85,
+    "family_friendly": true,
+    "rating": 4.3
+   }
+  },
+  {
+   "id": "sushi-wave",
+   "name": "Sushi Wave",
+   "category": "restaurant",
+   "slot": "EB5",
+   "zone": "EB",
+   "rect": {
+    "x": 872.7,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n901_535",
+   "popularity": 0.69,
+   "kpi": {
+    "sales_vs_target": 100,
+    "footfall_today": 1315,
+    "conversion_pct": 37.1,
+    "area_sqm": 749
+   },
+   "restaurant": {
+    "seats": 50,
+    "family_friendly": false,
+    "rating": 4.5
+   }
+  },
+  {
+   "id": "shawarma-street",
+   "name": "Shawarma Street",
+   "category": "restaurant",
+   "slot": "EB6",
+   "zone": "EB",
+   "rect": {
+    "x": 934.1,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n963_535",
+   "popularity": 0.43,
+   "kpi": {
+    "sales_vs_target": 102,
+    "footfall_today": 1010,
+    "conversion_pct": 58.0,
+    "area_sqm": 749
+   },
+   "restaurant": {
+    "seats": 40,
+    "family_friendly": true,
+    "rating": 4.0
+   }
+  },
+  {
+   "id": "pizza-piazza",
+   "name": "Pizza Piazza",
+   "category": "restaurant",
+   "slot": "EB7",
+   "zone": "EB",
+   "rect": {
+    "x": 995.6,
+    "y": 390,
+    "w": 57.4,
+    "h": 145
+   },
+   "door": "n1024_535",
+   "popularity": 0.6,
+   "kpi": {
+    "sales_vs_target": 90,
+    "footfall_today": 1090,
+    "conversion_pct": 50.9,
+    "area_sqm": 749
+   },
+   "restaurant": {
+    "seats": 70,
+    "family_friendly": true,
+    "rating": 4.2
+   }
+  },
+  {
+   "id": "kids-kingdom",
+   "name": "Kids Kingdom",
+   "category": "toys",
+   "slot": "S1",
+   "zone": "S",
+   "rect": {
+    "x": 147.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n178_585",
+   "popularity": 0.37,
+   "kpi": {
+    "sales_vs_target": 90,
+    "footfall_today": 711,
+    "conversion_pct": 11.0,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "mini-me",
+   "name": "Mini Me",
+   "category": "kids",
+   "slot": "S2",
+   "zone": "S",
+   "rect": {
+    "x": 212.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n242_585",
+   "popularity": 0.67,
+   "kpi": {
+    "sales_vs_target": 101,
+    "footfall_today": 1316,
+    "conversion_pct": 10.9,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "smart-tech",
+   "name": "Smart Tech",
+   "category": "electronics",
+   "slot": "S3",
+   "zone": "S",
+   "rect": {
+    "x": 277.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n308_585",
+   "popularity": 0.55,
+   "kpi": {
+    "sales_vs_target": 118,
+    "footfall_today": 1142,
+    "conversion_pct": 13.5,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "beauty-box",
+   "name": "Beauty Box",
+   "category": "beauty",
+   "slot": "S4",
+   "zone": "S",
+   "rect": {
+    "x": 342.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n372_585",
+   "popularity": 0.55,
+   "kpi": {
+    "sales_vs_target": 113,
+    "footfall_today": 1297,
+    "conversion_pct": 16.8,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "lens--light",
+   "name": "Lens & Light",
+   "category": "eyewear",
+   "slot": "S5",
+   "zone": "S",
+   "rect": {
+    "x": 407.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n438_585",
+   "popularity": 0.43,
+   "kpi": {
+    "sales_vs_target": 94,
+    "footfall_today": 926,
+    "conversion_pct": 14.9,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "mobile-mart",
+   "name": "Mobile Mart",
+   "category": "electronics",
+   "slot": "S6",
+   "zone": "S",
+   "rect": {
+    "x": 472.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n502_585",
+   "popularity": 0.64,
+   "kpi": {
+    "sales_vs_target": 110,
+    "footfall_today": 1591,
+    "conversion_pct": 17.4,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "sporty-kids",
+   "name": "Sporty Kids",
+   "category": "footwear",
+   "slot": "S7",
+   "zone": "S",
+   "rect": {
+    "x": 537.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n568_585",
+   "popularity": 0.37,
+   "kpi": {
+    "sales_vs_target": 86,
+    "footfall_today": 790,
+    "conversion_pct": 13.6,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "luxe-leather",
+   "name": "Luxe Leather",
+   "category": "fashion",
+   "slot": "S8",
+   "zone": "S",
+   "rect": {
+    "x": 602.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n632_585",
+   "popularity": 0.35,
+   "kpi": {
+    "sales_vs_target": 105,
+    "footfall_today": 695,
+    "conversion_pct": 9.5,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "travel-trunk",
+   "name": "Travel Trunk",
+   "category": "home",
+   "slot": "S9",
+   "zone": "S",
+   "rect": {
+    "x": 667.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n698_585",
+   "popularity": 0.29,
+   "kpi": {
+    "sales_vs_target": 74,
+    "footfall_today": 548,
+    "conversion_pct": 7.4,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "spice-souk",
+   "name": "Spice Souk",
+   "category": "gifts",
+   "slot": "S10",
+   "zone": "S",
+   "rect": {
+    "x": 732.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n762_585",
+   "popularity": 0.63,
+   "kpi": {
+    "sales_vs_target": 119,
+    "footfall_today": 1233,
+    "conversion_pct": 16.2,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "healthy-bowl",
+   "name": "Healthy Bowl",
+   "category": "restaurant",
+   "slot": "S11",
+   "zone": "S",
+   "rect": {
+    "x": 797.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n828_585",
+   "popularity": 0.27,
+   "kpi": {
+    "sales_vs_target": 95,
+    "footfall_today": 683,
+    "conversion_pct": 57.3,
+    "area_sqm": 631
+   },
+   "restaurant": {
+    "seats": 40,
+    "family_friendly": false,
+    "rating": 4.2
+   }
+  },
+  {
+   "id": "karak-corner",
+   "name": "Karak Corner",
+   "category": "cafe",
+   "slot": "S12",
+   "zone": "S",
+   "rect": {
+    "x": 862.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n892_585",
+   "popularity": 0.62,
+   "kpi": {
+    "sales_vs_target": 87,
+    "footfall_today": 1486,
+    "conversion_pct": 54.9,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "gelato-lab",
+   "name": "Gelato Lab",
+   "category": "cafe",
+   "slot": "S13",
+   "zone": "S",
+   "rect": {
+    "x": 927.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n958_585",
+   "popularity": 0.68,
+   "kpi": {
+    "sales_vs_target": 109,
+    "footfall_today": 1485,
+    "conversion_pct": 55.9,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "pharmacy-plus",
+   "name": "Pharmacy Plus",
+   "category": "pharmacy",
+   "slot": "S14",
+   "zone": "S",
+   "rect": {
+    "x": 992.0,
+    "y": 585,
+    "w": 61.0,
+    "h": 115
+   },
+   "door": "n1022_585",
+   "popularity": 0.56,
+   "kpi": {
+    "sales_vs_target": 120,
+    "footfall_today": 1288,
+    "conversion_pct": 13.0,
+    "area_sqm": 631
+   }
+  },
+  {
+   "id": "freshmart-hypermarket",
+   "name": "FreshMart Hypermarket",
+   "category": "grocery",
+   "slot": "AWN",
+   "zone": "AWN",
+   "rect": {
+    "x": 20,
+    "y": 60,
+    "w": 75,
+    "h": 270
+   },
+   "door": "n95_270",
+   "popularity": 0.9,
+   "kpi": {
+    "sales_vs_target": 119,
+    "footfall_today": 2298,
+    "conversion_pct": 14.7,
+    "area_sqm": 1822
+   }
+  },
+  {
+   "id": "home-haven",
+   "name": "Home Haven",
+   "category": "home",
+   "slot": "AWS",
+   "zone": "AWS",
+   "rect": {
+    "x": 20,
+    "y": 430,
+    "w": 75,
+    "h": 270
+   },
+   "door": "n95_490",
+   "popularity": 0.47,
+   "kpi": {
+    "sales_vs_target": 115,
+    "footfall_today": 1029,
+    "conversion_pct": 11.0,
+    "area_sqm": 1822
+   }
+  },
+  {
+   "id": "starlight-cinemas",
+   "name": "Starlight Cinemas",
+   "category": "cinema",
+   "slot": "AEN",
+   "zone": "AEN",
+   "rect": {
+    "x": 1105,
+    "y": 60,
+    "w": 75,
+    "h": 310
+   },
+   "door": "n1105_290",
+   "popularity": 0.85,
+   "kpi": {
+    "sales_vs_target": 95,
+    "footfall_today": 2096,
+    "conversion_pct": 13.5,
+    "area_sqm": 2092
+   }
+  },
+  {
+   "id": "maison-department-store",
+   "name": "Maison Department Store",
+   "category": "department",
+   "slot": "AES",
+   "zone": "AES",
+   "rect": {
+    "x": 1105,
+    "y": 390,
+    "w": 75,
+    "h": 310
+   },
+   "door": "n1105_470",
+   "popularity": 0.56,
+   "kpi": {
+    "sales_vs_target": 92,
+    "footfall_today": 1394,
+    "conversion_pct": 11.4,
+    "area_sqm": 2092
+   }
+  }
+ ],
+ "offers": [
+  {
+   "id": "urban-sole-1",
+   "store_id": "urban-sole",
+   "title": "Street Glide sneakers",
+   "item": "sneakers",
+   "tags": [
+    "sneakers",
+    "footwear"
+   ],
+   "price": 429,
+   "was": 499,
+   "discount_pct": 14,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 662,
+    "claims": 94,
+    "redemptions": 44
+   }
+  },
+  {
+   "id": "linen--loom-1",
+   "store_id": "linen--loom",
+   "title": "Season sale tops",
+   "item": "clothing",
+   "tags": [
+    "fashion"
+   ],
+   "price": 72,
+   "was": 96,
+   "discount_pct": 25,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 966,
+    "claims": 98,
+    "redemptions": 68
+   }
+  },
+  {
+   "id": "velvet-rose-1",
+   "store_id": "velvet-rose",
+   "title": "Season sale tops",
+   "item": "clothing",
+   "tags": [
+    "fashion"
+   ],
+   "price": 185,
+   "was": 226,
+   "discount_pct": 18,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 646,
+    "claims": 101,
+    "redemptions": 46
+   }
+  },
+  {
+   "id": "gentry-tailors-1",
+   "store_id": "gentry-tailors",
+   "title": "Season sale tops",
+   "item": "clothing",
+   "tags": [
+    "fashion"
+   ],
+   "price": 192,
+   "was": 222,
+   "discount_pct": 14,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 412,
+    "claims": 28,
+    "redemptions": 17
+   }
+  },
+  {
+   "id": "denim-district-1",
+   "store_id": "denim-district",
+   "title": "Season sale tops",
+   "item": "clothing",
+   "tags": [
+    "fashion"
+   ],
+   "price": 176,
+   "was": 237,
+   "discount_pct": 26,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 670,
+    "claims": 75,
+    "redemptions": 51
+   }
+  },
+  {
+   "id": "glow-beauty-1",
+   "store_id": "glow-beauty",
+   "title": "Gift set with any purchase",
+   "item": "beauty",
+   "tags": [
+    "beauty",
+    "gifts"
+   ],
+   "price": 113,
+   "was": 135,
+   "discount_pct": 16,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 585,
+    "claims": 39,
+    "redemptions": 21
+   }
+  },
+  {
+   "id": "aura-fragrances-1",
+   "store_id": "aura-fragrances",
+   "title": "Gift set with any purchase",
+   "item": "beauty",
+   "tags": [
+    "beauty",
+    "gifts"
+   ],
+   "price": 77,
+   "was": 107,
+   "discount_pct": 28,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 849,
+    "claims": 64,
+    "redemptions": 35
+   }
+  },
+  {
+   "id": "pixel-point-1",
+   "store_id": "pixel-point",
+   "title": "Wireless earbuds",
+   "item": "earbuds",
+   "tags": [
+    "electronics"
+   ],
+   "price": 307,
+   "was": 351,
+   "discount_pct": 13,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 915,
+    "claims": 86,
+    "redemptions": 47
+   }
+  },
+  {
+   "id": "gadget-garage-1",
+   "store_id": "gadget-garage",
+   "title": "Wireless earbuds",
+   "item": "earbuds",
+   "tags": [
+    "electronics"
+   ],
+   "price": 173,
+   "was": 218,
+   "discount_pct": 21,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 620,
+    "claims": 77,
+    "redemptions": 57
+   }
+  },
+  {
+   "id": "gadget-garage-2",
+   "store_id": "gadget-garage",
+   "title": "Phone case + screen guard",
+   "item": "accessories",
+   "tags": [
+    "electronics"
+   ],
+   "price": 65,
+   "was": 91,
+   "discount_pct": 29,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 691,
+    "claims": 61,
+    "redemptions": 34
+   }
+  },
+  {
+   "id": "opal-optics-1",
+   "store_id": "opal-optics",
+   "title": "Sunglasses 25% off",
+   "item": "sunglasses",
+   "tags": [
+    "eyewear"
+   ],
+   "price": 321,
+   "was": 451,
+   "discount_pct": 29,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 310,
+    "claims": 22,
+    "redemptions": 11
+   }
+  },
+  {
+   "id": "golden-thread-jewellers-1",
+   "store_id": "golden-thread-jewellers",
+   "title": "No making charges",
+   "item": "jewellery",
+   "tags": [
+    "jewellery",
+    "gifts"
+   ],
+   "price": 1190,
+   "was": 1575,
+   "discount_pct": 24,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 686,
+    "claims": 97,
+    "redemptions": 68
+   }
+  },
+  {
+   "id": "timekeeper-1",
+   "store_id": "timekeeper",
+   "title": "No making charges",
+   "item": "jewellery",
+   "tags": [
+    "jewellery",
+    "gifts"
+   ],
+   "price": 673,
+   "was": 922,
+   "discount_pct": 27,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 615,
+    "claims": 46,
+    "redemptions": 29
+   }
+  },
+  {
+   "id": "silk-route-abayas-1",
+   "store_id": "silk-route-abayas",
+   "title": "Season sale tops",
+   "item": "clothing",
+   "tags": [
+    "fashion"
+   ],
+   "price": 91,
+   "was": 116,
+   "discount_pct": 22,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 576,
+    "claims": 89,
+    "redemptions": 58
+   }
+  },
+  {
+   "id": "silk-route-abayas-2",
+   "store_id": "silk-route-abayas",
+   "title": "Denim 2 for 1",
+   "item": "jeans",
+   "tags": [
+    "fashion"
+   ],
+   "price": 200,
+   "was": 243,
+   "discount_pct": 18,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 670,
+    "claims": 103,
+    "redemptions": 66
+   }
+  },
+  {
+   "id": "bean--bloom-caf\u00e9-1",
+   "store_id": "bean--bloom-caf\u00e9",
+   "title": "Coffee + pastry",
+   "item": "coffee",
+   "tags": [
+    "coffee",
+    "snack"
+   ],
+   "price": 23,
+   "was": 30,
+   "discount_pct": 23,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 601,
+    "claims": 59,
+    "redemptions": 35
+   }
+  },
+  {
+   "id": "paper-trail-books-1",
+   "store_id": "paper-trail-books",
+   "title": "3 for 2 on kids' books",
+   "item": "books",
+   "tags": [
+    "books",
+    "kids"
+   ],
+   "price": 32,
+   "was": 42,
+   "discount_pct": 24,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 266,
+    "claims": 18,
+    "redemptions": 11
+   }
+  },
+  {
+   "id": "little-explorers-1",
+   "store_id": "little-explorers",
+   "title": "Weekend outfits 20% off",
+   "item": "kids clothing",
+   "tags": [
+    "kids",
+    "fashion"
+   ],
+   "price": 96,
+   "was": 120,
+   "discount_pct": 20,
+   "kid_friendly": true,
+   "funded_by": "mall",
+   "stats": {
+    "impressions": 291,
+    "claims": 42,
+    "redemptions": 15
+   }
+  },
+  {
+   "id": "kicks-lab-1",
+   "store_id": "kicks-lab",
+   "title": "Court Classic low-tops",
+   "item": "sneakers",
+   "tags": [
+    "sneakers",
+    "footwear"
+   ],
+   "price": 389,
+   "was": 409,
+   "discount_pct": 5,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 747,
+    "claims": 53,
+    "redemptions": 37
+   }
+  },
+  {
+   "id": "tiny-toes-1",
+   "store_id": "tiny-toes",
+   "title": "School shoes",
+   "item": "kids shoes",
+   "tags": [
+    "kids",
+    "footwear"
+   ],
+   "price": 129,
+   "was": 169,
+   "discount_pct": 24,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 471,
+    "claims": 63,
+    "redemptions": 42
+   }
+  },
+  {
+   "id": "brick-box-toys-1",
+   "store_id": "brick-box-toys",
+   "title": "Building sets 20% off",
+   "item": "toys",
+   "tags": [
+    "toys",
+    "kids"
+   ],
+   "price": 165,
+   "was": 214,
+   "discount_pct": 23,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 902,
+    "claims": 136,
+    "redemptions": 92
+   }
+  },
+  {
+   "id": "sweet-tooth-1",
+   "store_id": "sweet-tooth",
+   "title": "Coffee + pastry",
+   "item": "coffee",
+   "tags": [
+    "coffee",
+    "snack"
+   ],
+   "price": 24,
+   "was": 27,
+   "discount_pct": 11,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 872,
+    "claims": 119,
+    "redemptions": 72
+   }
+  },
+  {
+   "id": "jungle-jam-play-zone-1",
+   "store_id": "jungle-jam-play-zone",
+   "title": "1-hour play pass, 2 kids",
+   "item": "play pass",
+   "tags": [
+    "play",
+    "kids"
+   ],
+   "price": 70,
+   "was": 90,
+   "discount_pct": 22,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 989,
+    "claims": 139,
+    "redemptions": 96
+   }
+  },
+  {
+   "id": "casa-living-1",
+   "store_id": "casa-living",
+   "title": "Cookware bundle",
+   "item": "home",
+   "tags": [
+    "home"
+   ],
+   "price": 140,
+   "was": 163,
+   "discount_pct": 14,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 470,
+    "claims": 40,
+    "redemptions": 26
+   }
+  },
+  {
+   "id": "kitchen-craft-1",
+   "store_id": "kitchen-craft",
+   "title": "Cookware bundle",
+   "item": "home",
+   "tags": [
+    "home"
+   ],
+   "price": 240,
+   "was": 335,
+   "discount_pct": 28,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 451,
+    "claims": 37,
+    "redemptions": 10
+   }
+  },
+  {
+   "id": "bloom-florist-1",
+   "store_id": "bloom-florist",
+   "title": "Gift box",
+   "item": "gifts",
+   "tags": [
+    "gifts"
+   ],
+   "price": 126,
+   "was": 147,
+   "discount_pct": 14,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 463,
+    "claims": 66,
+    "redemptions": 32
+   }
+  },
+  {
+   "id": "pet-pantry-1",
+   "store_id": "pet-pantry",
+   "title": "Pet food 15% off",
+   "item": "pet food",
+   "tags": [
+    "pets"
+   ],
+   "price": 81,
+   "was": 94,
+   "discount_pct": 14,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 744,
+    "claims": 51,
+    "redemptions": 37
+   }
+  },
+  {
+   "id": "phone-doctor-1",
+   "store_id": "phone-doctor",
+   "title": "Wireless earbuds",
+   "item": "earbuds",
+   "tags": [
+    "electronics"
+   ],
+   "price": 173,
+   "was": 192,
+   "discount_pct": 10,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 426,
+    "claims": 31,
+    "redemptions": 22
+   }
+  },
+  {
+   "id": "henna-lounge-1",
+   "store_id": "henna-lounge",
+   "title": "Gift set with any purchase",
+   "item": "beauty",
+   "tags": [
+    "beauty",
+    "gifts"
+   ],
+   "price": 130,
+   "was": 178,
+   "discount_pct": 27,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 774,
+    "claims": 56,
+    "redemptions": 25
+   }
+  },
+  {
+   "id": "gift-garden-1",
+   "store_id": "gift-garden",
+   "title": "Gift box",
+   "item": "gifts",
+   "tags": [
+    "gifts"
+   ],
+   "price": 80,
+   "was": 113,
+   "discount_pct": 29,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 547,
+    "claims": 48,
+    "redemptions": 25
+   }
+  },
+  {
+   "id": "peak-outdoor-1",
+   "store_id": "peak-outdoor",
+   "title": "Training kit bundle",
+   "item": "sportswear",
+   "tags": [
+    "sports",
+    "fashion"
+   ],
+   "price": 261,
+   "was": 338,
+   "discount_pct": 23,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 506,
+    "claims": 63,
+    "redemptions": 43
+   }
+  },
+  {
+   "id": "stride-athletics-1",
+   "store_id": "stride-athletics",
+   "title": "Runner X trainers",
+   "item": "sneakers",
+   "tags": [
+    "sneakers",
+    "footwear",
+    "sports"
+   ],
+   "price": 349,
+   "was": 449,
+   "discount_pct": 22,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 844,
+    "claims": 94,
+    "redemptions": 42
+   }
+  },
+  {
+   "id": "stride-athletics-2",
+   "store_id": "stride-athletics",
+   "title": "Kids' Runner X, 2nd pair 30% off",
+   "item": "kids sneakers",
+   "tags": [
+    "sneakers",
+    "kids",
+    "footwear"
+   ],
+   "price": 189,
+   "was": 269,
+   "discount_pct": 30,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 1080,
+    "claims": 148,
+    "redemptions": 93
+   }
+  },
+  {
+   "id": "fit-factory-1",
+   "store_id": "fit-factory",
+   "title": "Training kit bundle",
+   "item": "sportswear",
+   "tags": [
+    "sports",
+    "fashion"
+   ],
+   "price": 125,
+   "was": 164,
+   "discount_pct": 24,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 471,
+    "claims": 53,
+    "redemptions": 31
+   }
+  },
+  {
+   "id": "cycle-hub-1",
+   "store_id": "cycle-hub",
+   "title": "Training kit bundle",
+   "item": "sportswear",
+   "tags": [
+    "sports",
+    "fashion"
+   ],
+   "price": 249,
+   "was": 346,
+   "discount_pct": 28,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 885,
+    "claims": 102,
+    "redemptions": 69
+   }
+  },
+  {
+   "id": "game-zone-1",
+   "store_id": "game-zone",
+   "title": "Wireless earbuds",
+   "item": "earbuds",
+   "tags": [
+    "electronics"
+   ],
+   "price": 168,
+   "was": 200,
+   "discount_pct": 16,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 613,
+    "claims": 67,
+    "redemptions": 46
+   }
+  },
+  {
+   "id": "snap-studio-1",
+   "store_id": "snap-studio",
+   "title": "Wireless earbuds",
+   "item": "earbuds",
+   "tags": [
+    "electronics"
+   ],
+   "price": 290,
+   "was": 386,
+   "discount_pct": 25,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 986,
+    "claims": 147,
+    "redemptions": 42
+   }
+  },
+  {
+   "id": "dates--co-1",
+   "store_id": "dates--co",
+   "title": "Gift box",
+   "item": "gifts",
+   "tags": [
+    "gifts"
+   ],
+   "price": 94,
+   "was": 120,
+   "discount_pct": 22,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 346,
+    "claims": 43,
+    "redemptions": 29
+   }
+  },
+  {
+   "id": "noodle-theory-1",
+   "store_id": "noodle-theory",
+   "title": "Lunch combo",
+   "item": "lunch",
+   "tags": [
+    "lunch"
+   ],
+   "price": 42,
+   "was": 47,
+   "discount_pct": 11,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 753,
+    "claims": 101,
+    "redemptions": 48
+   }
+  },
+  {
+   "id": "burger-barn-1",
+   "store_id": "burger-barn",
+   "title": "Lunch combo",
+   "item": "lunch",
+   "tags": [
+    "lunch"
+   ],
+   "price": 59,
+   "was": 66,
+   "discount_pct": 11,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 984,
+    "claims": 92,
+    "redemptions": 46
+   }
+  },
+  {
+   "id": "saffron-house-1",
+   "store_id": "saffron-house",
+   "title": "Family thali for 4",
+   "item": "lunch",
+   "tags": [
+    "lunch",
+    "family",
+    "indian"
+   ],
+   "price": 165,
+   "was": 190,
+   "discount_pct": 13,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 1393,
+    "claims": 147,
+    "redemptions": 97
+   }
+  },
+  {
+   "id": "olive--ember-1",
+   "store_id": "olive--ember",
+   "title": "15% off lunch, kids eat free",
+   "item": "lunch",
+   "tags": [
+    "lunch",
+    "family",
+    "grill"
+   ],
+   "price": 0,
+   "was": 0,
+   "discount_pct": 15,
+   "kid_friendly": true,
+   "funded_by": "mall",
+   "stats": {
+    "impressions": 434,
+    "claims": 30,
+    "redemptions": 13
+   }
+  },
+  {
+   "id": "sushi-wave-1",
+   "store_id": "sushi-wave",
+   "title": "Lunch combo",
+   "item": "lunch",
+   "tags": [
+    "lunch"
+   ],
+   "price": 38,
+   "was": 50,
+   "discount_pct": 24,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 712,
+    "claims": 101,
+    "redemptions": 71
+   }
+  },
+  {
+   "id": "shawarma-street-1",
+   "store_id": "shawarma-street",
+   "title": "Lunch combo",
+   "item": "lunch",
+   "tags": [
+    "lunch"
+   ],
+   "price": 42,
+   "was": 59,
+   "discount_pct": 29,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 411,
+    "claims": 57,
+    "redemptions": 28
+   }
+  },
+  {
+   "id": "pizza-piazza-1",
+   "store_id": "pizza-piazza",
+   "title": "Kids' pizza + juice",
+   "item": "lunch",
+   "tags": [
+    "lunch",
+    "kids",
+    "pizza"
+   ],
+   "price": 35,
+   "was": 45,
+   "discount_pct": 22,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 699,
+    "claims": 47,
+    "redemptions": 33
+   }
+  },
+  {
+   "id": "kids-kingdom-1",
+   "store_id": "kids-kingdom",
+   "title": "Building sets 20% off",
+   "item": "toys",
+   "tags": [
+    "toys",
+    "kids"
+   ],
+   "price": 172,
+   "was": 220,
+   "discount_pct": 22,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 434,
+    "claims": 53,
+    "redemptions": 24
+   }
+  },
+  {
+   "id": "mini-me-1",
+   "store_id": "mini-me",
+   "title": "Kids' basics 2 for 1",
+   "item": "kids clothing",
+   "tags": [
+    "kids",
+    "fashion"
+   ],
+   "price": 73,
+   "was": 88,
+   "discount_pct": 17,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 966,
+    "claims": 131,
+    "redemptions": 70
+   }
+  },
+  {
+   "id": "smart-tech-1",
+   "store_id": "smart-tech",
+   "title": "Wireless earbuds",
+   "item": "earbuds",
+   "tags": [
+    "electronics"
+   ],
+   "price": 151,
+   "was": 213,
+   "discount_pct": 29,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 805,
+    "claims": 127,
+    "redemptions": 76
+   }
+  },
+  {
+   "id": "smart-tech-2",
+   "store_id": "smart-tech",
+   "title": "Phone case + screen guard",
+   "item": "accessories",
+   "tags": [
+    "electronics"
+   ],
+   "price": 42,
+   "was": 50,
+   "discount_pct": 16,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 633,
+    "claims": 97,
+    "redemptions": 46
+   }
+  },
+  {
+   "id": "beauty-box-1",
+   "store_id": "beauty-box",
+   "title": "Gift set with any purchase",
+   "item": "beauty",
+   "tags": [
+    "beauty",
+    "gifts"
+   ],
+   "price": 166,
+   "was": 218,
+   "discount_pct": 24,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 616,
+    "claims": 97,
+    "redemptions": 53
+   }
+  },
+  {
+   "id": "lens--light-1",
+   "store_id": "lens--light",
+   "title": "Sunglasses 25% off",
+   "item": "sunglasses",
+   "tags": [
+    "eyewear"
+   ],
+   "price": 147,
+   "was": 206,
+   "discount_pct": 29,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 499,
+    "claims": 51,
+    "redemptions": 23
+   }
+  },
+  {
+   "id": "mobile-mart-1",
+   "store_id": "mobile-mart",
+   "title": "Wireless earbuds",
+   "item": "earbuds",
+   "tags": [
+    "electronics"
+   ],
+   "price": 247,
+   "was": 326,
+   "discount_pct": 24,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 876,
+    "claims": 68,
+    "redemptions": 36
+   }
+  },
+  {
+   "id": "sporty-kids-1",
+   "store_id": "sporty-kids",
+   "title": "Junior trainers",
+   "item": "kids sneakers",
+   "tags": [
+    "sneakers",
+    "kids",
+    "footwear"
+   ],
+   "price": 159,
+   "was": 199,
+   "discount_pct": 20,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 540,
+    "claims": 49,
+    "redemptions": 22
+   }
+  },
+  {
+   "id": "luxe-leather-1",
+   "store_id": "luxe-leather",
+   "title": "Season sale tops",
+   "item": "clothing",
+   "tags": [
+    "fashion"
+   ],
+   "price": 151,
+   "was": 200,
+   "discount_pct": 24,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 549,
+    "claims": 43,
+    "redemptions": 25
+   }
+  },
+  {
+   "id": "travel-trunk-1",
+   "store_id": "travel-trunk",
+   "title": "Cookware bundle",
+   "item": "home",
+   "tags": [
+    "home"
+   ],
+   "price": 247,
+   "was": 350,
+   "discount_pct": 29,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 351,
+    "claims": 43,
+    "redemptions": 11
+   }
+  },
+  {
+   "id": "spice-souk-1",
+   "store_id": "spice-souk",
+   "title": "Gift box",
+   "item": "gifts",
+   "tags": [
+    "gifts"
+   ],
+   "price": 135,
+   "was": 158,
+   "discount_pct": 15,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 885,
+    "claims": 66,
+    "redemptions": 44
+   }
+  },
+  {
+   "id": "healthy-bowl-1",
+   "store_id": "healthy-bowl",
+   "title": "Lunch combo",
+   "item": "lunch",
+   "tags": [
+    "lunch"
+   ],
+   "price": 52,
+   "was": 71,
+   "discount_pct": 27,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 387,
+    "claims": 52,
+    "redemptions": 32
+   }
+  },
+  {
+   "id": "karak-corner-1",
+   "store_id": "karak-corner",
+   "title": "Coffee + pastry",
+   "item": "coffee",
+   "tags": [
+    "coffee",
+    "snack"
+   ],
+   "price": 27,
+   "was": 33,
+   "discount_pct": 18,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 611,
+    "claims": 38,
+    "redemptions": 18
+   }
+  },
+  {
+   "id": "gelato-lab-1",
+   "store_id": "gelato-lab",
+   "title": "Two scoops, 3rd free",
+   "item": "dessert",
+   "tags": [
+    "dessert",
+    "kids"
+   ],
+   "price": 28,
+   "was": 42,
+   "discount_pct": 33,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 1000,
+    "claims": 65,
+    "redemptions": 29
+   }
+  },
+  {
+   "id": "pharmacy-plus-1",
+   "store_id": "pharmacy-plus",
+   "title": "Sunscreen 2 for 1",
+   "item": "pharmacy",
+   "tags": [
+    "pharmacy"
+   ],
+   "price": 42,
+   "was": 49,
+   "discount_pct": 14,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 792,
+    "claims": 118,
+    "redemptions": 56
+   }
+  },
+  {
+   "id": "freshmart-hypermarket-1",
+   "store_id": "freshmart-hypermarket",
+   "title": "Weekend fresh deals",
+   "item": "groceries",
+   "tags": [
+    "grocery"
+   ],
+   "price": 19,
+   "was": 26,
+   "discount_pct": 27,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 999,
+    "claims": 82,
+    "redemptions": 52
+   }
+  },
+  {
+   "id": "home-haven-1",
+   "store_id": "home-haven",
+   "title": "Cookware bundle",
+   "item": "home",
+   "tags": [
+    "home"
+   ],
+   "price": 253,
+   "was": 296,
+   "discount_pct": 15,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 719,
+    "claims": 88,
+    "redemptions": 44
+   }
+  },
+  {
+   "id": "starlight-cinemas-1",
+   "store_id": "starlight-cinemas",
+   "title": "Family pack: 4 tickets + popcorn",
+   "item": "movie",
+   "tags": [
+    "cinema",
+    "kids"
+   ],
+   "price": 142,
+   "was": 195,
+   "discount_pct": 27,
+   "kid_friendly": true,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 1184,
+    "claims": 78,
+    "redemptions": 41
+   }
+  },
+  {
+   "id": "maison-department-store-1",
+   "store_id": "maison-department-store",
+   "title": "Extra 10% for app users",
+   "item": "department",
+   "tags": [
+    "fashion",
+    "home"
+   ],
+   "price": 194,
+   "was": 245,
+   "discount_pct": 21,
+   "kid_friendly": false,
+   "funded_by": "tenant",
+   "stats": {
+    "impressions": 771,
+    "claims": 105,
+    "redemptions": 78
+   }
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/*
+  Dalma Mall Concierge, distilled. Neutral greys and white, one accent (blue) for the primary action and
+  the route, red only for the crowd surge and always beside words. No cards, no shadows, no borders:
+  whitespace and four type sizes (13 / 15 / 20 / 32) carry the hierarchy. The map is the one rich object.
+*/
+@theme {
+  --color-page: #f4f4f4;
+  --color-ink: #1f1f1f;
+  --color-muted: #6b6b6b;
+  --color-faint: #767676;
+  --color-wash: #ececec;
+  --color-accent: #1a73e8;
+  --color-accent-soft: #e8f0fe;
+  --color-alert: #d93025;
+  --font-sans: var(--font-inter);
+}
+
+html, body { background: var(--color-page); color: var(--color-ink); }
+body { font-family: var(--font-inter), system-ui, sans-serif; font-size: 15px; line-height: 1.5; }
+.tnum { font-variant-numeric: tabular-nums; }
+::selection { background: var(--color-accent-soft); color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
+* { scrollbar-width: thin; scrollbar-color: #cfcfcf transparent; }
+input, textarea { caret-color: var(--color-accent); }
+
+/* The one primary action per screen */
+.primary { display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 24px; border-radius: 26px;
+  background: var(--color-accent); color: #fff; font-size: 15px; font-weight: 600; transition: background 150ms; }
+.primary:hover { background: #1666d0; }
+.primary:disabled { background: #c9c9c9; }
+/* Everything else is text */
+.link { font-size: 15px; font-weight: 500; color: var(--color-ink); text-decoration: underline; text-decoration-color: #c9c9c9; text-underline-offset: 4px; }
+.link:hover { text-decoration-color: var(--color-ink); }
+.quiet { font-size: 13px; color: var(--color-muted); }
+.quiet:hover { color: var(--color-ink); }
+
+.map-btn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 20px; background: #fff; color: var(--color-muted); }
+.map-btn:hover { color: var(--color-ink); }
+.map-btn[aria-pressed="true"] { color: var(--color-accent); }
+
+.device { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--color-wash); }
+@media (min-width: 1024px) { .device { width: 412px; height: min(880px, calc(100dvh - 56px - 64px)); border-radius: 36px; } }
+
+.sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #fff; border-radius: 24px 24px 0 0; display: flex; flex-direction: column;
+  transition: height 320ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.grabber { width: 36px; height: 4px; border-radius: 2px; background: #dcdcdc; }
+
+.typing { display: inline-flex; gap: 4px; }
+.typing span { width: 5px; height: 5px; border-radius: 999px; background: var(--color-muted); animation: typing 1s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.15s; }
+.typing span:nth-child(3) { animation-delay: 0.3s; }
+.route-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.4s 0.1s cubic-bezier(0.3, 0, 0.2, 1) forwards; }
+.me-pulse { animation: pulse 2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+.rise { animation: rise 280ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pulse { 0% { transform: scale(0.6); opacity: 0.6; } 100% { transform: scale(1.8); opacity: 0; } }
+@keyframes typing { 0%, 60%, 100% { opacity: 0.3; } 30% { opacity: 1; } }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .route-draw { stroke-dashoffset: 0; }
+}

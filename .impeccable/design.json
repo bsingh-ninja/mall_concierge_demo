@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T07:40:19.091897+00:00",
+  "title": "Design System: Dalma Mall Concierge",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Route Blue",
+        "canonical": "#1a73e8",
+        "tonalRamp": [
+          "#0b2a5c",
+          "#123f8a",
+          "#1a5bbf",
+          "#1a73e8",
+          "#5a9af0",
+          "#b7cff7",
+          "#d6e4fb",
+          "#e8f0fe"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Route Blue, Pressed",
+        "canonical": "#1666d0",
+        "tonalRamp": [
+          "#0b2a5c",
+          "#123f8a",
+          "#1a5bbf",
+          "#1a73e8",
+          "#5a9af0",
+          "#b7cff7",
+          "#d6e4fb",
+          "#e8f0fe"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Blue Mist",
+        "canonical": "#e8f0fe",
+        "tonalRamp": [
+          "#0b2a5c",
+          "#123f8a",
+          "#1a5bbf",
+          "#1a73e8",
+          "#5a9af0",
+          "#b7cff7",
+          "#d6e4fb",
+          "#e8f0fe"
+        ]
+      },
+      "alert": {
+        "role": "secondary",
+        "displayName": "Surge Red",
+        "canonical": "#d93025",
+        "tonalRamp": [
+          "#4a0f0b",
+          "#7a1912",
+          "#a8241a",
+          "#d93025",
+          "#e5675f",
+          "#f0a39e",
+          "#f8d1ce",
+          "#fce8e6"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1f1f1f",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#6b6b6b",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "#767676",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Pale Grey",
+        "canonical": "#f4f4f4",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Wash",
+        "canonical": "#ececec",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "disabled": {
+        "role": "neutral",
+        "displayName": "Disabled Grey",
+        "canonical": "#c9c9c9",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "grabber": {
+        "role": "neutral",
+        "displayName": "Grabber Grey",
+        "canonical": "#dcdcdc",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "map-floor": {
+        "role": "neutral",
+        "displayName": "Floor Grey",
+        "canonical": "#e2e2e2",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "map-corridor": {
+        "role": "neutral",
+        "displayName": "Corridor White",
+        "canonical": "#f6f6f6",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "map-icon": {
+        "role": "neutral",
+        "displayName": "Icon Grey",
+        "canonical": "#8a8a8a",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "map-travelled": {
+        "role": "neutral",
+        "displayName": "Walked Grey",
+        "canonical": "#a8a8a8",
+        "tonalRamp": [
+          "#1f1f1f",
+          "#3a3a3a",
+          "#545454",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#c9c9c9",
+          "#ececec",
+          "#f6f6f6"
+        ]
+      },
+      "heat-mid": {
+        "role": "data",
+        "displayName": "Heat Mist",
+        "canonical": "#b7cff7",
+        "tonalRamp": [
+          "#0b2a5c",
+          "#123f8a",
+          "#1a5bbf",
+          "#1a73e8",
+          "#5a9af0",
+          "#b7cff7",
+          "#d6e4fb",
+          "#e8f0fe"
+        ]
+      },
+      "heat-high": {
+        "role": "data",
+        "displayName": "Deep Footfall Blue",
+        "canonical": "#1a5bbf",
+        "tonalRamp": [
+          "#0b2a5c",
+          "#123f8a",
+          "#1a5bbf",
+          "#1a73e8",
+          "#5a9af0",
+          "#b7cff7",
+          "#d6e4fb",
+          "#e8f0fe"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles and headline figures (KPIs, before/after minutes)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sheet and section titles, the turn instruction, small KPI figures."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Concierge replies, prompt input, explanatory copy."
+      },
+      "body-strong": {
+        "displayName": "Body Strong",
+        "purpose": "Store names (500), prices and current states (600)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sublines, table headers, KPI labels, agent log, quiet actions."
+      },
+      "map-label": {
+        "displayName": "Map Label",
+        "purpose": "Store names on units at base zoom; scales with the map."
+      },
+      "map-tag": {
+        "displayName": "Map Tag",
+        "purpose": "Ink and red pill tags on the map."
+      }
+    },
+    "shadows": [],
+    "heatRamp": {
+      "stops": [
+        [
+          0.2,
+          "#ffffff"
+        ],
+        [
+          0.6,
+          "#b7cff7"
+        ],
+        [
+          0.95,
+          "#1a5bbf"
+        ]
+      ],
+      "interpolation": "rgb",
+      "transition": "fill 700ms ease",
+      "purpose": "Operator footfall fill on map units."
+    },
+    "mapStrokes": [
+      {
+        "name": "route",
+        "value": "6px #1a73e8 over 10px #ffffff casing, round joins"
+      },
+      {
+        "name": "travelled",
+        "value": "6px #a8a8a8"
+      },
+      {
+        "name": "ghost",
+        "value": "4px #d93025 dotted 2/7"
+      },
+      {
+        "name": "unit-stop",
+        "value": "2px #1a73e8"
+      },
+      {
+        "name": "unit-surge",
+        "value": "2px #d93025"
+      },
+      {
+        "name": "unit-selected",
+        "value": "2px #1f1f1f"
+      },
+      {
+        "name": "unit-below-target",
+        "value": "1.4px #1f1f1f dashed 4/3"
+      },
+      {
+        "name": "corridor",
+        "value": "44px #f6f6f6 round caps"
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-sheet",
+        "value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "Sheet height (320ms) and row rise-in (280ms, 6px)."
+      },
+      {
+        "name": "route-draw",
+        "value": "1.4s cubic-bezier(0.3, 0, 0.2, 1), 0.1s delay",
+        "purpose": "Route stroke draws on via dashoffset."
+      },
+      {
+        "name": "location-pulse",
+        "value": "2s ease-out infinite, scale 0.6 to 1.8, opacity 0.6 to 0",
+        "purpose": "Halo around the shopper dot."
+      },
+      {
+        "name": "typing",
+        "value": "1s infinite, 0.15s stagger",
+        "purpose": "Three dots for an agent in progress."
+      },
+      {
+        "name": "hover",
+        "value": "150ms",
+        "purpose": "Primary button background."
+      },
+      {
+        "name": "heat-fill",
+        "value": "700ms ease",
+        "purpose": "Footfall fill changes."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all durations 0.01ms; route shown fully drawn",
+        "purpose": "prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one filled action per screen: Plan, Start route, Accept and claim.",
+      "html": "<button class=\"ds-primary\">Start route</button> <button class=\"ds-primary\" disabled>Start route</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 24px;border:none;border-radius:26px;background:#1a73e8;color:#fff;font:600 15px/1 Inter,system-ui,sans-serif;transition:background 150ms;cursor:pointer}.ds-primary:hover{background:#1666d0}.ds-primary:focus-visible{outline:2px solid #1a73e8;outline-offset:3px}.ds-primary:disabled{background:#c9c9c9;cursor:default}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Suggestions and secondary choices; underlined text, never a button shape.",
+      "html": "<button class=\"ds-link\">2 hours, kids, sneakers, lunch</button>",
+      "css": ".ds-link{background:none;border:none;padding:0;font:500 15px/1.5 Inter,system-ui,sans-serif;color:#1f1f1f;text-decoration:underline;text-decoration-color:#c9c9c9;text-underline-offset:4px;cursor:pointer}.ds-link:hover{text-decoration-color:#1f1f1f}.ds-link:focus-visible{outline:2px solid #1a73e8;outline-offset:3px;border-radius:4px}"
+    },
+    {
+      "name": "Quiet Action",
+      "kind": "button",
+      "refersTo": "text-quiet",
+      "description": "Low-stakes controls: Pause, Start a new visit, How was this planned?",
+      "html": "<button class=\"ds-quiet\">Pause</button>",
+      "css": ".ds-quiet{background:none;border:none;padding:0;font:400 13px/1.5 Inter,system-ui,sans-serif;color:#6b6b6b;text-decoration:underline;text-underline-offset:4px;cursor:pointer}.ds-quiet:hover{color:#1f1f1f}.ds-quiet:focus-visible{outline:2px solid #1a73e8;outline-offset:3px;border-radius:4px}"
+    },
+    {
+      "name": "Prompt Field",
+      "kind": "input",
+      "refersTo": "prompt-field",
+      "description": "The concierge request: a borderless grey pill with an inset submit.",
+      "html": "<form class=\"ds-prompt\" onsubmit=\"return false\"><input placeholder=\"What do you need today?\" aria-label=\"What do you need today?\"><button>Plan</button></form>",
+      "css": ".ds-prompt{display:flex;align-items:center;gap:8px;height:52px;padding:0 6px 0 20px;border-radius:26px;background:#f4f4f4;max-width:380px}.ds-prompt input{flex:1;min-width:0;border:none;background:transparent;font:400 15px/1.5 Inter,system-ui,sans-serif;color:#1f1f1f;caret-color:#1a73e8;outline:none}.ds-prompt input::placeholder{color:#767676}.ds-prompt button{height:40px;padding:0 20px;border:none;border-radius:999px;background:#1a73e8;color:#fff;font:600 15px/1 Inter,system-ui,sans-serif;cursor:pointer}.ds-prompt button:focus-visible{outline:2px solid #1a73e8;outline-offset:3px}.ds-prompt:focus-within{box-shadow:none}"
+    },
+    {
+      "name": "Mode Switch",
+      "kind": "nav",
+      "refersTo": "text-link",
+      "description": "Shopper / Operator as plain text tabs; weight marks the current view.",
+      "html": "<nav class=\"ds-tabs\"><button aria-selected=\"true\">Shopper</button><button aria-selected=\"false\">Operator</button></nav>",
+      "css": ".ds-tabs{display:flex;gap:20px}.ds-tabs button{background:none;border:none;padding:0;font:400 15px/1.5 Inter,system-ui,sans-serif;color:#6b6b6b;cursor:pointer}.ds-tabs button:hover{color:#1f1f1f}.ds-tabs button[aria-selected=true]{font-weight:600;color:#1f1f1f}.ds-tabs button:focus-visible{outline:2px solid #1a73e8;outline-offset:3px;border-radius:4px}"
+    },
+    {
+      "name": "Map Control",
+      "kind": "button",
+      "refersTo": "map-control",
+      "description": "Flat white circular map buttons; blue glyph when pressed.",
+      "html": "<div class=\"ds-mapctl\"><button aria-label=\"Zoom in\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M5 12h14M12 5v14\"/></svg></button><button aria-label=\"Recenter\" aria-pressed=\"true\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"7\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3\"/></svg></button></div>",
+      "css": ".ds-mapctl{display:flex;flex-direction:column;gap:8px;padding:12px;background:#e2e2e2;width:max-content}.ds-mapctl button{display:grid;place-items:center;width:40px;height:40px;border:none;border-radius:20px;background:#fff;color:#6b6b6b;cursor:pointer}.ds-mapctl button:hover{color:#1f1f1f}.ds-mapctl button[aria-pressed=true]{color:#1a73e8}.ds-mapctl button:focus-visible{outline:2px solid #1a73e8;outline-offset:3px}"
+    },
+    {
+      "name": "Offer Row",
+      "kind": "custom",
+      "refersTo": "sheet",
+      "description": "A plain row in the sheet: thumbnail, name, subline, tabular price with the former price struck through. No card, no divider.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-thumb\"></span><div class=\"ds-main\"><div class=\"ds-name\">Gelato Lab</div><div class=\"ds-sub\">Two scoops, 3rd free, unit U-55</div></div><div class=\"ds-price\"><div>AED 28</div><s>42</s></div></div>",
+      "css": ".ds-row{display:flex;align-items:center;gap:12px;padding:10px 0;max-width:360px;font-family:Inter,system-ui,sans-serif}.ds-thumb{width:40px;height:40px;border-radius:8px;background:#ececec;flex-shrink:0}.ds-main{flex:1;min-width:0}.ds-name{font:500 15px/1.5 Inter,system-ui,sans-serif;color:#1f1f1f}.ds-sub{font:400 13px/1.5 Inter,system-ui,sans-serif;color:#6b6b6b}.ds-price{text-align:right;font-variant-numeric:tabular-nums}.ds-price div{font:600 15px/1.5 Inter,system-ui,sans-serif;color:#1f1f1f}.ds-price s{font-size:13px;color:#767676}"
+    },
+    {
+      "name": "Turn Banner",
+      "kind": "card",
+      "refersTo": "turn-banner",
+      "description": "The walking instruction floating over the map: flat white, no shadow.",
+      "html": "<div class=\"ds-banner-wrap\"><div class=\"ds-banner\" role=\"status\"><div class=\"ds-head\"><span>Walk 67 m</span><span class=\"ds-clock\">12:24</span></div><div class=\"ds-to\">to Stride Athletics, 1 min</div></div></div>",
+      "css": ".ds-banner-wrap{background:#e2e2e2;padding:16px;max-width:380px}.ds-banner{background:#fff;border-radius:20px;padding:16px 20px;font-family:Inter,system-ui,sans-serif}.ds-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}.ds-head span:first-child{font:600 20px/1.25 Inter,system-ui,sans-serif;color:#1f1f1f}.ds-clock{font:400 13px/1.5 Inter,system-ui,sans-serif;color:#6b6b6b;font-variant-numeric:tabular-nums}.ds-to{font:400 15px/1.5 Inter,system-ui,sans-serif;color:#6b6b6b}"
+    },
+    {
+      "name": "Map Tags and Units",
+      "kind": "custom",
+      "refersTo": "map-tag",
+      "description": "White map units with grey icon and name; ink pill tags; red surge tag and outline; blue stop outline.",
+      "html": "<div class=\"ds-map\"><div class=\"ds-unit\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#8a8a8a\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z\"/></svg><span>Denim District</span></div><div class=\"ds-unit ds-stop\"><span>Stride Athletics</span></div><div class=\"ds-unit ds-surge\"><span>Saffron House</span></div><span class=\"ds-tag\">Olive &amp; Ember</span><span class=\"ds-tag ds-tag-alert\">Saffron House, 98% full</span></div>",
+      "css": ".ds-map{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:16px;background:#e2e2e2;border-radius:18px;max-width:420px;font-family:Inter,system-ui,sans-serif}.ds-unit{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;width:110px;height:64px;background:#fff;border-radius:5px;font:500 11px/1.15 Inter,system-ui,sans-serif;color:#1f1f1f;text-align:center;box-sizing:border-box}.ds-stop{outline:2px solid #1a73e8;outline-offset:-2px}.ds-surge{outline:2px solid #d93025;outline-offset:-2px}.ds-tag{display:inline-block;padding:5px 9px;border-radius:999px;background:#1f1f1f;color:#fff;font:600 11.5px/1 Inter,system-ui,sans-serif}.ds-tag-alert{background:#d93025}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Floor Plan",
+    "overview": "The map is the app. A light grey floor, white units, grey line icons and store names wherever they fit: this is the one rich object on every screen, executed to the category standard of indoor mapping. Everything around it is distilled to strict minimalism. Neutral greys and white carry the chrome; one blue marks the single primary action and the route; one red appears only for a crowd surge, always beside words.\n\nThere are no cards, no drop shadows, no borders or dividers in the interface chrome. Hierarchy comes from whitespace and four type sizes alone. Lists are plain rows; secondary actions are underlined text; the plan, the walk and the reroute live in one flat white sheet pulled up over the map. The operator console reuses the same map as a footfall heat field and reads as a working tool: plain tables, large tabular figures, and the agent log as text.\n\nDensity is calm and projector-proof. Numbers are always tabular; every price, time and percentage aligns.",
+    "keyCharacteristics": [
+      "One labelled indoor map per screen, flat and full-bleed on the phone.",
+      "Neutral greys and white; blue for the action and the route; red only for the surge, with text.",
+      "Four interface sizes (13 / 15 / 20 / 32), weights 400 / 500 / 600, Inter with tabular figures.",
+      "Flat white surfaces separated by space and tone, never by line or shadow.",
+      "One filled primary action per screen; everything else is text."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Rule",
+        "body": "Route Blue marks the one primary action, the route and the shopper's position. It is never decoration, never a heading colour, never a second button.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Speaks Rule",
+        "body": "Surge Red appears only for crowding and its consequences, and always next to a sentence that names the cause (\"Saffron House is 98% full, 32 min wait\").",
+        "section": "colors"
+      },
+      {
+        "name": "The Four Sizes Rule",
+        "body": "Interface text uses 13, 15, 20 or 32px and nothing else. Map labels live on the map's own scale and do not count.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every price, time, distance, count and percentage is set with tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Surfaces over the map are separated from it by colour and position, never by shadow, border or blur.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the labelled map visible on every shopper screen; the sheet covers part of it, never all of it.",
+      "**Do** use exactly one filled Route Blue pill per screen and make every other action text.",
+      "**Do** separate sections with 24 to 40px of space and type size, not with lines or boxes.",
+      "**Do** set every number in tabular figures.",
+      "**Do** pair every use of Surge Red with a sentence naming the crowding.",
+      "**Do** use outlines on map units to carry state (stop, surge, selected, below target); that is the map's native language.",
+      "**Do** honour reduced motion: the route appears fully drawn and animations collapse to instant."
+    ],
+    "donts": [
+      "**Don't** add cards, drop shadows, borders or dividers to the interface chrome.",
+      "**Don't** use Route Blue for headings, decoration or a second button.",
+      "**Don't** introduce type sizes outside 13 / 15 / 20 / 32 in the interface, or weights above 600.",
+      "**Don't** fill map units with category colours; units are white, identity comes from the grey icon and the name.",
+      "**Don't** stack map tags or labels; a tag with no clear spot is dropped."
+    ]
+  }
+}
