@@ -13,22 +13,33 @@ import { look } from "@/lib/look";
 export type Orientation = "landscape" | "portrait";
 export type Camera = { kind: "all"; byWidth?: boolean } | { kind: "fit"; points: number[][]; pad?: number; byWidth?: boolean } | { kind: "follow"; x: number; y: number; span: number };
 
-const BLUE = "#1a73e8", RED = "#d93025", INK = "#1f1f1f", MUTED = "#6b6b6b", ICON = "#8a8a8a";
+// Colours come from CSS tokens (--map-*), so the phone map stays light and the operator map follows the theme.
+const BLUE = "var(--map-route)", RED = "var(--map-alert)", INK = "var(--map-ink)", MUTED = "var(--map-muted)";
+
+// Category identity: a soft tint per store group, with a matching icon colour.
+const TINT: Record<string, [string, string]> = {
+  "Dining": ["var(--tint-food)", "#c2521f"], "Kids & toys": ["var(--tint-kids)", "#2e8a4f"], "Electronics": ["var(--tint-tech)", "#3b6fb0"],
+  "Apparel": ["var(--tint-style)", "#6a5bd8"], "Footwear": ["var(--tint-style)", "#6a5bd8"], "Beauty & health": ["var(--tint-style)", "#9a4f8f"],
+  "Sports": ["var(--tint-sport)", "#1f8597"], "Home & gifts": ["var(--tint-home)", "#9a7a3c"], "Leisure": ["var(--tint-home)", "#9a7a3c"], "Services": ["var(--tint-home)", "#9a7a3c"],
+};
+const tint = (category: string) => TINT[look(category).group] ?? TINT["Services"];
+const isFood = (c: string) => look(c).group === "Dining";
+const isKids = (c: string) => look(c).group === "Kids & toys";
+/** Queue at a restaurant from its occupancy (same rule as the backend's crowd agent). */
+export const queueMin = (occ: number) => Math.max(0, Math.round((occ - 0.6) * 40));
+export type MapLayers = { deals?: boolean; crowds?: Record<string, number> | null; focus?: "food" | "kids" | null };
 
 const tp = (o: Orientation, x: number, y: number): [number, number] => (o === "landscape" ? [x, y] : [y, 1240 - x]);
 const tr = (o: Orientation, r: { x: number; y: number; w: number; h: number }) =>
   o === "landscape" ? r : { x: r.y, y: 1240 - (r.x + r.w), w: r.h, h: r.w };
 
-// Footfall: white (quiet) to charcoal (packed). Neutral, so blue stays the route's alone.
+// Footfall ramp: the unit colour (quiet) to sea-glass, amber, then coral (packed). Works on light and dark floors.
 export function heatColor(v: number) {
-  const stops: [number, string][] = [[0.2, "#ffffff"], [0.6, "#bdbdbd"], [0.95, "#4a4a4a"]];
-  const t = Math.max(stops[0][0], Math.min(stops[2][0], v));
-  const [a, b] = t <= stops[1][0] ? [stops[0], stops[1]] : [stops[1], stops[2]];
-  const f = (t - a[0]) / (b[0] - a[0]);
-  const ca = hx(a[1]), cb = hx(b[1]);
-  return `rgb(${ca.map((c, i) => Math.round(c + (cb[i] - c) * f)).join(",")})`;
+  const pct = (a: number, b: number) => Math.round(Math.max(0, Math.min(1, (v - a) / (b - a))) * 100);
+  if (v <= 0.55) return `color-mix(in srgb, var(--heat-1) ${pct(0.15, 0.55)}%, var(--map-unit))`;
+  if (v <= 0.8) return `color-mix(in srgb, var(--heat-2) ${pct(0.55, 0.8)}%, var(--heat-1))`;
+  return `color-mix(in srgb, var(--heat-3) ${pct(0.8, 0.97)}%, var(--heat-2))`;
 }
-const hx = (h: string) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
 
 type Props = {
   mall: Mall;
@@ -48,6 +59,10 @@ type Props = {
   onToggleGraph?: () => void;
   selected?: string | null;
   onSelect?: (storeId: string) => void;
+  onPan?: () => void; // the user started dragging the map (the phone collapses its sheet for a full map)
+  layers?: MapLayers;
+  preview?: number[][] | null; // "show me the way" path, in mall coordinates
+  legLabels?: boolean; // metres and minutes on each walking leg
   controlsTop?: number;
   compactControls?: boolean; // only the recenter button (the camera follows the shopper)
   insetTop?: number; // px covered by floating UI at the top; the camera frames the area between the insets
@@ -101,20 +116,42 @@ export default function MallMap(p: Props) {
     const r = (activeStop === i ? 14 : 12) * k, lift = r * 2.2;
     return { i, x, y, r, lift, box: { x0: x - r, y0: y - lift - r, x1: x + r, y1: y } };
   });
-  const tagReqs = [
+  // Metres and minutes at the middle of each leg (plan view only).
+  const legTags = (p.legLabels && plan && !travelled ? plan.legs : []).flatMap((leg) => {
+    const pts = leg.points.map(([x, y]) => T(x, y));
+    const seg = pts.slice(1).map((q, j) => Math.hypot(q[0] - pts[j][0], q[1] - pts[j][1]));
+    const L = seg.reduce((a, b) => a + b, 0);
+    if (L / k < 90) return [];
+    let d = L / 2, j = 0;
+    while (j < seg.length - 1 && d > seg[j]) { d -= seg[j]; j++; }
+    const f = seg[j] ? d / seg[j] : 0, x = pts[j][0] + (pts[j + 1][0] - pts[j][0]) * f, y = pts[j][1] + (pts[j + 1][1] - pts[j][1]) * f;
+    const text = `${leg.metres} m · ${Math.max(1, Math.round(leg.walk_min))} min`, w = text.length * 11.5 * k * 0.56 + 14 * k;
+    return [{ x, y, text, box: { x0: x - w / 2, y0: y - 12 * k, x1: x + w / 2, y1: y + 12 * k } }];
+  });
+  const tagReqs: { id: string; text: string; tone: Tone }[] = [
     ...surges.flatMap((g) => { const st = mall.stores.find((x) => x.id === g.id); return st ? [{ id: st.id, text: `${st.name}, ${g.pct ?? ""}% full`, tone: "alert" as const }] : []; }),
     ...[...new Set(p.labelIds ?? [])].filter((id) => !surgeIds.has(id)).flatMap((id) => { const st = mall.stores.find((x) => x.id === id); return st ? [{ id, text: st.name, tone: "ink" as const }] : []; })
       .sort((a, b) => Number(!!plan?.stops.find((x) => x.store_id === b.id)?.replaces) - Number(!!plan?.stops.find((x) => x.store_id === a.id)?.replaces)),
   ];
+  const layers = p.layers ?? {};
+  const focusOn = (c: string) => !layers.focus || (layers.focus === "food" ? isFood(c) : isKids(c));
+  if (layers.crowds) for (const st of mall.stores) {
+    const q = isFood(st.category) && !surgeIds.has(st.id) ? queueMin(layers.crowds[st.id] ?? 0) : 0;
+    if (q > 0 && focusOn(st.category)) tagReqs.push({ id: st.id, text: `${q} min queue`, tone: q > 15 ? "alert" : "warn" });
+  }
+  if (layers.deals) for (const st of mall.stores) {
+    const best = [...st.offers].sort((a, b) => b.discount_pct - a.discount_pct)[0];
+    if (best && best.discount_pct >= 20 && focusOn(st.category) && !tagReqs.some((t) => t.id === st.id)) tagReqs.push({ id: st.id, text: `−${best.discount_pct}%`, tone: "money" });
+  }
   const narrow = size.w < 500 && !!heat;
-  const isMust = (id: string, tone: string) => tone === "alert" || !!plan?.stops.find((x) => x.store_id === id)?.replaces;
+  const isMust = (id: string, tone: string) => (tone === "alert" && surgeIds.has(id)) || !!plan?.stops.find((x) => x.store_id === id)?.replaces;
   tagReqs.sort((a, b) => Number(isMust(b.id, b.tone)) - Number(isMust(a.id, a.tone)));
   const tags = placeTags(tagReqs.filter((t) => !narrow || t.tone === "alert" || !!plan?.stops.find((x) => x.store_id === t.id)?.replaces).map((t) => {
     const st = mall.stores.find((x) => x.id === t.id)!;
     const pin = pins.find((q) => plan?.stops[q.i].store_id === t.id);
-    const must = t.tone === "alert" || !!plan?.stops.find((x) => x.store_id === t.id)?.replaces;
+    const must = isMust(t.id, t.tone);
     return { ...t, must, rect: tr(o, st.rect), pin: pin ? { x: pin.x, y: pin.y - pin.lift, r: pin.r } : null };
-  }), [...pins.map((q) => q.box), entBox], k, [vb[0], vb[1] + it * k, vb[2] - ir * k, vb[3] - (it + ib) * k]);
+  }), [...pins.map((q) => q.box), entBox, ...legTags.map((l) => l.box)], k, [vb[0], vb[1] + it * k, vb[2] - ir * k, vb[3] - (it + ib) * k]);
   const blocked = [...tags.map((t) => t.box), ...pins.map((q) => q.box)];
   const hits = (b: Box) => blocked.some((q) => b.x0 < q.x1 && b.x1 > q.x0 && b.y0 < q.y1 && b.y1 > q.y0);
 
@@ -124,13 +161,13 @@ export default function MallMap(p: Props) {
   }
 
   return (
-    <div ref={box} className={`${p.className ?? "relative"} touch-none select-none overflow-hidden bg-wash`}
+    <div ref={box} className={`${p.className ?? "relative"} touch-none select-none overflow-hidden`} style={{ background: "var(--map-bg)" }}
       onPointerDown={(e) => { drag.current = { x: e.clientX, y: e.clientY, vb, moved: false }; }}
       onPointerMove={(e) => {
         const d = drag.current;
         if (!d) return;
         const dx = (e.clientX - d.x) * k, dy = (e.clientY - d.y) * k;
-        if (Math.abs(dx) + Math.abs(dy) > 3 * k) d.moved = true;
+        if (!d.moved && Math.abs(dx) + Math.abs(dy) > 3 * k) { d.moved = true; p.onPan?.(); }
         if (d.moved) setUser([d.vb[0] - dx, d.vb[1] - dy, d.vb[2], d.vb[3]]);
       }}
       onPointerUp={() => { setTimeout(() => { drag.current = null; }, 0); }}
@@ -140,20 +177,23 @@ export default function MallMap(p: Props) {
         zoom(e.deltaY > 0 ? 1.15 : 1 / 1.15, vb[0] + (e.clientX - r.left) * k, vb[1] + (e.clientY - r.top) * k);
       }}>
       <svg viewBox={vb.join(" ")} width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label={`${mall.name} map`} className="block">
-        <rect x={floor.x} y={floor.y} width={floor.w} height={floor.h} rx={18} fill="#e2e2e2" />
+        <rect x={floor.x} y={floor.y} width={floor.w} height={floor.h} rx={22} fill="var(--map-floor)" />
         {mall.corridors.map((c) => {
           const [x1, y1] = T(c.x1, c.y1), [x2, y2] = T(c.x2, c.y2);
-          return <line key={c.id} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#f6f6f6" strokeWidth={44} strokeLinecap="round" />;
+          return <line key={c.id} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--map-corridor)" strokeWidth={44} strokeLinecap="round" />;
         })}
-        <circle cx={atr[0]} cy={atr[1]} r={40} fill="#f6f6f6" />
+        <circle cx={atr[0]} cy={atr[1]} r={46} fill="var(--map-corridor)" />
 
         {mall.stores.map((s) => {
           const r = tr(o, s.rect);
           const isSurge = surgeIds.has(s.id), isSel = selected === s.id, isFlag = flagged.includes(s.id), isStop = stopIds.has(s.id);
+          const occ = heat ?? layers.crowds;
+          const dim = !focusOn(s.category) && !isStop && !isSel;
           return (
-            <rect key={s.id} x={r.x + 1.5} y={r.y + 1.5} width={r.w - 3} height={r.h - 3} rx={5}
-              fill={heat ? heatColor(heat[s.id] ?? 0) : "#ffffff"} style={{ transition: "fill 700ms ease", cursor: onSelect ? "pointer" : undefined }}
-              stroke={isSurge ? RED : isSel ? INK : isStop ? BLUE : isFlag ? INK : "none"} strokeWidth={(isSurge || isSel || isStop ? 2 : 1.4) * k}
+            <rect key={s.id} x={r.x + 2} y={r.y + 2} width={r.w - 4} height={r.h - 4} rx={6} className={isSurge ? "surge-pulse" : undefined}
+              fill={occ ? heatColor(occ[s.id] ?? 0) : tint(s.category)[0]} opacity={dim ? 0.28 : 1}
+              style={{ transition: "fill 700ms ease, opacity 300ms ease", cursor: onSelect ? "pointer" : undefined }}
+              stroke={isSurge ? RED : isSel ? INK : isStop ? BLUE : isFlag ? INK : "var(--map-unit-line)"} strokeWidth={(isSurge || isSel ? 2.6 : isStop ? 2.2 : isFlag ? 1.4 : 1) * k}
               strokeDasharray={isFlag && !isSel ? `${4 * k} ${3 * k}` : undefined}
               onClick={() => { if (!drag.current?.moved) onSelect?.(s.id); }}>
               <title>{`${s.unit} ${s.name}`}</title>
@@ -165,7 +205,7 @@ export default function MallMap(p: Props) {
         {mall.stores.map((s) => {
           const r = tr(o, s.rect);
           const wpx = r.w / k, hpx = r.h / k;
-          if (Math.min(wpx, hpx) < 12 || narrow) return null;
+          if (Math.min(wpx, hpx) < 12 || narrow || (!focusOn(s.category) && !stopIds.has(s.id))) return null;
           const lk = look(s.category);
           const Icon = lk.icon;
           const fs = 11 * k, iconPx = Math.min(16, Math.min(wpx, hpx) - 2);
@@ -178,9 +218,9 @@ export default function MallMap(p: Props) {
           const textTop = top + (showIcon ? iconPx * k + 3 * k : 0);
           return (
             <g key={"lbl" + s.id} pointerEvents="none">
-              {showIcon && <Icon x={cx - (iconPx * k) / 2} y={top} width={iconPx * k} height={iconPx * k} color={heat ? ((heat[s.id] ?? 0) > 0.7 ? "#ffffff" : INK) : ICON} strokeWidth={2} />}
+              {showIcon && <Icon x={cx - (iconPx * k) / 2} y={top} width={iconPx * k} height={iconPx * k} color={heat || layers.crowds ? INK : tint(s.category)[1]} strokeWidth={2} />}
               {lines.map((ln, i) => (
-                <text key={i} x={cx} y={textTop + fs * (i + 0.85) * 1.15} textAnchor="middle" fontSize={fs} fontWeight={500} fill={heat && (heat[s.id] ?? 0) > 0.7 ? "#ffffff" : INK}>{ln}</text>
+                <text key={i} x={cx} y={textTop + fs * (i + 0.85) * 1.15} textAnchor="middle" fontSize={fs} fontWeight={600} fill={INK}>{ln}</text>
               ))}
             </g>
           );
@@ -202,26 +242,28 @@ export default function MallMap(p: Props) {
           </g>
         )}
 
+        {p.preview && p.preview.length > 1 && <polyline points={line(p.preview)} fill="none" stroke="var(--map-preview)" strokeWidth={5 * k} strokeDasharray={`${10 * k} ${8 * k}`} strokeLinecap="round" strokeLinejoin="round" className="march" pointerEvents="none" />}
         {ghost && <polyline points={line(ghost)} fill="none" stroke={RED} strokeWidth={4 * k} strokeDasharray={`${2 * k} ${7 * k}`} strokeLinecap="round" />}
         {route.length > 1 && (
           <g pointerEvents="none">
-            <polyline points={line(route)} fill="none" stroke="#ffffff" strokeWidth={10 * k} strokeLinejoin="round" strokeLinecap="round" />
+            <polyline points={line(route)} fill="none" stroke="var(--map-casing)" strokeWidth={11 * k} strokeLinejoin="round" strokeLinecap="round" />
             <polyline points={line(route)} fill="none" stroke={BLUE} strokeWidth={6 * k} strokeLinejoin="round" strokeLinecap="round" className={travelled ? undefined : "route-draw"} pathLength={travelled ? undefined : 1} />
-            {travelled && travelled.length > 1 && <polyline points={line(travelled)} fill="none" stroke="#a8a8a8" strokeWidth={6 * k} strokeLinejoin="round" strokeLinecap="round" />}
+            {travelled && travelled.length > 1 && <polyline points={line(travelled)} fill="none" stroke="var(--map-walked)" strokeWidth={6 * k} strokeLinejoin="round" strokeLinecap="round" />}
           </g>
         )}
 
         <g pointerEvents="none">
-          {!tags.some((t) => t.box.x0 < atrBox.x1 && t.box.x1 > atrBox.x0 && t.box.y0 < atrBox.y1 && t.box.y1 > atrBox.y0) && <text x={atr[0]} y={atr[1] + 4 * k} textAnchor="middle" fontSize={11 * k} fontWeight={600} fill={MUTED} paintOrder="stroke" stroke="#f6f6f6" strokeWidth={4 * k}>Atrium</text>}
+          {!tags.some((t) => t.box.x0 < atrBox.x1 && t.box.x1 > atrBox.x0 && t.box.y0 < atrBox.y1 && t.box.y1 > atrBox.y0) && <text x={atr[0]} y={atr[1] + 4 * k} textAnchor="middle" fontSize={11 * k} fontWeight={600} fill={MUTED} paintOrder="stroke" stroke="var(--map-corridor)" strokeWidth={4 * k} letterSpacing={1.2 * k}>ATRIUM</text>}
           <circle cx={ent[0]} cy={ent[1]} r={11 * k} fill={INK} />
-          <DoorOpen x={ent[0] - 6.5 * k} y={ent[1] - 6.5 * k} width={13 * k} height={13 * k} color="#ffffff" strokeWidth={2.2} />
+          <DoorOpen x={ent[0] - 6.5 * k} y={ent[1] - 6.5 * k} width={13 * k} height={13 * k} color="var(--map-casing)" strokeWidth={2.2} />
           <Pill x={entPill.x} y={entPill.y} k={k} text="Main entrance" tone="ink" />
         </g>
 
+        {legTags.map((l, i) => <Pill key={"leg" + i} x={l.x} y={l.y} k={k} text={l.text} tone="light" />)}
         {pins.map(({ i, x, y, r, lift }) => (
-          <g key={"pin" + i} pointerEvents="none">
-            <path d={`M${x} ${y} C ${x - r * 0.4} ${y - r * 0.9}, ${x - r} ${y - lift + r * 0.9}, ${x - r} ${y - lift} A ${r} ${r} 0 1 1 ${x + r} ${y - lift} C ${x + r} ${y - lift + r * 0.9}, ${x + r * 0.4} ${y - r * 0.9}, ${x} ${y} Z`} fill={BLUE} stroke="#ffffff" strokeWidth={1.5 * k} />
-            <text x={x} y={y - lift + r * 0.4} textAnchor="middle" fontSize={r * 1.1} fontWeight={700} fill="#ffffff">{i + 1}</text>
+          <g key={"pin" + i} pointerEvents="none" className="pin-drop" style={{ animationDelay: `${i * 140}ms` }}>
+            <path d={`M${x} ${y} C ${x - r * 0.4} ${y - r * 0.9}, ${x - r} ${y - lift + r * 0.9}, ${x - r} ${y - lift} A ${r} ${r} 0 1 1 ${x + r} ${y - lift} C ${x + r} ${y - lift + r * 0.9}, ${x + r * 0.4} ${y - r * 0.9}, ${x} ${y} Z`} fill={BLUE} stroke="var(--map-casing)" strokeWidth={2 * k} />
+            <text x={x} y={y - lift + r * 0.4} textAnchor="middle" fontSize={r * 1.1} fontWeight={800} fill="#ffffff">{i + 1}</text>
           </g>
         ))}
         {tags.map((t) => <Pill key={"tag" + t.id} x={t.x} y={t.y} k={k} text={t.text} tone={t.tone} />)}
@@ -230,8 +272,8 @@ export default function MallMap(p: Props) {
           const [x, y] = T(pos.x, pos.y);
           return (
             <g pointerEvents="none">
-              <circle cx={x} cy={y} r={20 * k} fill={BLUE} opacity={0.16} className="me-pulse" />
-              <circle cx={x} cy={y} r={8 * k} fill={BLUE} stroke="#ffffff" strokeWidth={3 * k} />
+              <circle cx={x} cy={y} r={22 * k} fill={BLUE} opacity={0.22} className="me-pulse" />
+              <circle cx={x} cy={y} r={9 * k} fill={BLUE} stroke="#ffffff" strokeWidth={3.5 * k} />
             </g>
           );
         })()}
@@ -242,19 +284,23 @@ export default function MallMap(p: Props) {
         {!p.compactControls && <button className="map-btn" aria-label="Zoom out" onClick={() => zoom(1.4)}><Minus size={18} /></button>}
         {(!p.compactControls || user) && !(small && !user) && <button className="map-btn" aria-label="Recenter" aria-pressed={!!user} onClick={() => setUser(null)}><Locate size={18} /></button>}
         {p.onToggleGraph && !p.compactControls && !small && (
-          <button className="map-btn" aria-label="Show A* graph nodes" aria-pressed={!!showGraph} title="Show A* graph nodes" onClick={p.onToggleGraph}><Network size={18} /></button>
+          <button className="map-btn" aria-label="Show the walking graph" aria-pressed={!!showGraph} title="Show the walking graph (A* nodes and metres)" onClick={p.onToggleGraph}><Network size={18} /></button>
         )}
       </div>}
     </div>
   );
 }
 
-function Pill({ x, y, k, text, tone }: { x: number; y: number; k: number; text: string; tone: "ink" | "alert" }) {
+type Tone = "ink" | "alert" | "warn" | "money" | "light";
+const PILL: Record<Tone, [string, string]> = {
+  ink: ["var(--map-tag)", "var(--map-tag-text)"], alert: [RED, "#ffffff"], warn: ["#e0602f", "#ffffff"], money: ["#b7832a", "#ffffff"], light: ["var(--map-casing)", "var(--map-ink)"],
+};
+function Pill({ x, y, k, text, tone }: { x: number; y: number; k: number; text: string; tone: Tone }) {
   const fs = 11.5 * k, w = text.length * fs * 0.56 + 14 * k;
   return (
     <g pointerEvents="none">
-      <rect x={x - w / 2} y={y - fs} width={w} height={fs * 2} rx={fs} fill={tone === "alert" ? RED : INK} />
-      <text x={x} y={y + fs * 0.36} textAnchor="middle" fontSize={fs} fontWeight={600} fill="#ffffff">{text}</text>
+      <rect x={x - w / 2} y={y - fs} width={w} height={fs * 2} rx={fs} fill={PILL[tone][0]} stroke={tone === "light" ? "var(--map-unit-line)" : "none"} strokeWidth={k} />
+      <text x={x} y={y + fs * 0.36} textAnchor="middle" fontSize={fs} fontWeight={700} fill={PILL[tone][1]}>{text}</text>
     </g>
   );
 }
@@ -266,10 +312,10 @@ type Box = { x0: number; y0: number; x1: number; y1: number };
   route stop, otherwise on its own unit. A tag with no clear spot is dropped (the stop list still names it),
   except the story tags (surge, reroute), which go first and sit on their own unit.
 */
-function placeTags(reqs: { id: string; must?: boolean; rect: { x: number; y: number; w: number; h: number }; text: string; tone: "ink" | "alert"; pin: { x: number; y: number; r: number } | null }[], obstacles: Box[], k: number, vb: number[]) {
+function placeTags(reqs: { id: string; must?: boolean; rect: { x: number; y: number; w: number; h: number }; text: string; tone: Tone; pin: { x: number; y: number; r: number } | null }[], obstacles: Box[], k: number, vb: number[]) {
   const fs = 11.5 * k, h = fs * 2;
   const taken = [...obstacles];
-  const out: { id: string; x: number; y: number; text: string; tone: "ink" | "alert"; box: Box }[] = [];
+  const out: { id: string; x: number; y: number; text: string; tone: Tone; box: Box }[] = [];
   for (const t of reqs) {
     const w = t.text.length * fs * 0.56 + 14 * k;
     const gap = 6 * k;
